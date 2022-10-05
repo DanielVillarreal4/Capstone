@@ -21,13 +21,6 @@ namespace ccsystems.Controllers
             _configuration = configuration;
         }
 
-
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<Client>>> GetProduct()
-        //{
-        //    return await _context.Product.ToListAsync();
-        //}
-
         [HttpGet]
         public JsonResult Get()
         {
@@ -51,6 +44,34 @@ namespace ccsystems.Controllers
             }
             return new JsonResult(table);
         }
+
+        //[HttpGet]
+        //public async Task<IActionResult> GetByEmail(string Email, string Password, string ReturnURL)
+        //{
+        //    string query = @" 
+        //                     select Email, Password from
+        //                     dbo.ClientTable";
+        //    DataTable table = new DataTable();
+        //    string sqlDataSource = _configuration.GetConnectionString("AppCon");
+        //    SqlDataReader myReader;
+        //    using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+        //    {
+        //        myCon.Open();
+        //        using (SqlCommand myCommand = new SqlCommand(query, myCon))
+        //        {
+        //            myReader = myCommand.ExecuteReader();
+        //            table.Load(myReader);
+        //            myReader.Close();
+        //            myCon.Close();
+        //        }
+        //    }
+        //    //var testEmail = table.Columns.ToString().Contains(Email);
+        //    //var testPassWord = table.Columns.ToString().Contains(Password);
+        //    //if (testEmail && testPassWord)
+        //        return Redirect(ReturnURL);
+        //    //else
+        //    //    return Redirect("/login");
+        //}
 
         [HttpPost]
         public JsonResult Post(Client client)

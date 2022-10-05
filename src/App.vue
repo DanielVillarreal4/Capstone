@@ -1,49 +1,57 @@
 <template>
   <v-app id="inspire">
-    <v-app-bar app color="primary" dark>
-      <v-row>
-        <v-col class="pl-10" cols="2" align-self="center">
-          <v-app-bar-title class="appTitle">C & C Systems</v-app-bar-title>
-        </v-col>
-       <v-spacer></v-spacer> <!--  <v-divider vertical></v-divider> -->
-        <v-col
-          offset=""
-          cols="3"
-          align-self="end"
-          class="d-flex align-end flex-column"
-        >
-          <tr class="trClass"> 
-            <td v-for="item in items" :key="item.title" link :to="item.to">
-              <v-list dense nav flat color="primary">
-                <v-list-item :key="item.title" link :to="item.to">
-                  <v-list-item-icon>
-                    <v-icon>{{ item.icon }}</v-icon>
-                  </v-list-item-icon>
-
-                  <v-list-item-content>
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list>
-            </td>
-            <td>
-              <v-btn icon class="pa-8 profileBtn" x-large link to="/profile">
-                <v-icon>mdi-account-circle</v-icon>
-              </v-btn>
-            </td>
-          </tr>
-        </v-col>
-      </v-row>
+    <v-app-bar app color="primary" dark ma-0 ma-md-5 class="appBar">
+      <v-app-bar-title class="appTitle">C & C Systems</v-app-bar-title>
+      <v-spacer></v-spacer>
+      <v-divider
+        vertical
+        class="divider"
+        style="border-color=white"
+      ></v-divider>
+      <NavBar />
+      <v-menu transition="slide-y-transition" bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn class="pa-8 profileBtn" icon v-bind="attrs" v-on="on">
+            <v-icon>mdi-account-circle</v-icon>
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item v-if="$auth.isAuthenticated"
+            ><v-btn width="100%" to="/profile">Profile</v-btn></v-list-item
+          >
+          <v-list-item v-for="(item, i) in profileBtnLinks" :key="i">
+            <v-btn width="100%" link :to="item.to">{{ item.title }}</v-btn>
+          </v-list-item>
+          <v-list-item v-if="$auth.isAuthenticated">
+            <LogoutButton style="width: 100%" />
+          </v-list-item>
+          <v-list-item v-else>
+            <login-button style="width: 100%" />
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
-
+    <Loading v-if="$auth.isLoading" />
     <v-main>
       <router-view></router-view>
     </v-main>
+    <footer />
   </v-app>
 </template>
 
 <script>
+import Loading from "@/components/Loading";
+import LogoutButton from "./components/LogoutButton.vue";
+import LoginButton from "./components/LoginButton.vue";
+import NavBar from "@/components/NavBar";
+
 export default {
+  components: {
+    Loading,
+    LogoutButton,
+    LoginButton,
+    NavBar,
+  },
   data: () => ({
     drawer: null,
     items: [
@@ -52,21 +60,23 @@ export default {
       { title: "Contact Us", icon: "mdi-phone", to: "/contact-us" },
       // { icon: "mdi-account-circle", to: "/contact-us" },
     ],
+    profileBtnLinks: [
+      { title: "Login", to: "/login" },
+      { title: "Registration", to: "/registration" },
+      { title: "Test", icon: "mdi-paper", to: "/testingauth" },
+    ],
   }),
 };
 </script>
 <style scoped>
 #topbar {
-  min-height: 42px;
+  min-height: 64px;
 }
 .dividerClass {
   border-color: white;
 }
 .col {
   padding: 2px;
-}
-.appTitle {
-  font-size: 2em;
 }
 
 #inspire
@@ -81,10 +91,10 @@ export default {
   padding-right: 30px;
   margin-right: 30px;
 }
-.profileBtn {
+/* .profileBtn {
   margin-top: -0.6em;
-}
-.trClass{
+} */
+.trClass {
   border-color: white;
   align-self: stretch;
   border: solid;
@@ -97,5 +107,33 @@ export default {
   width: 0px;
   vertical-align: text-bottom;
   margin: 0 -1px; */
+}
+.appBar {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7));
+}
+.divider {
+  border-width: 0 2px 0 0;
+}
+.theme--dark.v-divider {
+  border-color: white;
+}
+</style>
+<style>
+#inspire
+  > div
+  > header
+  > div
+  > div.appTitle.v-toolbar__title.v-app-bar-title
+  > div.v-app-bar-title__content,
+.v-app-bar-title__content,
+.appTitle {
+  font-size: 1.5em;
+  text-overflow: unset;
+  overflow: unset;
+  word-wrap: unset;
+  padding-bottom: 1em;
+}
+.v-toolbar__content {
+  align-items: center;
 }
 </style>

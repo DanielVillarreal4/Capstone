@@ -34,6 +34,17 @@ namespace ccsystems
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
 
+            // 1. Add Authentication Services
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = "https://dev-2av5br-e.us.auth0.com/";
+                options.Audience = "https://CCSystemsAPI/api";
+            });
+
             // Configure cookie based authentication
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                     .AddCookie(options =>
@@ -74,6 +85,7 @@ namespace ccsystems
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
 
             app.UseRouting();
             app.UseAuthentication();

@@ -48,12 +48,7 @@
                             >
                           </v-col>
                         </v-row>
-                        <v-btn
-                          color="blue"
-                          dark
-                          block
-                          tile
-                          @click="loginUser"
+                        <v-btn color="blue" dark block tile @click="loginUser"
                           >Log in</v-btn
                         >
                       </v-col>
@@ -174,12 +169,7 @@
                           type="password"
                           v-model="confirmedPassword"
                         />
-                        <v-btn
-                          color="blue"
-                          dark
-                          block
-                          tile
-                          @click="createUser"
+                        <v-btn color="blue" dark block tile @click="createUser"
                           >Sign up</v-btn
                         >
                       </v-col>
@@ -208,6 +198,7 @@ export default {
     Email: "",
     Password: "",
     confirmedPassword: "",
+    clients: [],
   }),
   props: {
     source: String,
@@ -234,15 +225,36 @@ export default {
       });
       console.log(response);
       console.log(response.data.StatusCode);
-      if (response.data.StatusCode == 200) {this.resetInput(); this.step--;}
+      if (response.data.StatusCode == 200) {
+        this.resetInput();
+        this.step--;
+      }
     },
-     async loginUser() {
-      const response = await axios.post("client", {
-        ClientPhoneNumber: this.ClientPhoneNumber,
-        Password: this.Password,
+    //  async loginUser() {
+    //   const response = await axios.get("client");
+
+    // //   , {
+    // //     params:{
+    // //     Email: this.Email,
+    // //     Password: this.Password,
+    // //     ReturnURL: "http://localhost:8080/"
+    // //   }
+    // //  }
+    //   console.log(response);
+    //   console.log(response.data.StatusCode);
+    // },
+    loginUser() {
+      axios.get("client").then((response) => {
+        response.data.forEach((element) => {
+          if(element.Email === this.Email)
+          {
+          this.clients.push({   
+            Email: element.Email,
+          });
+          }
+        });
       });
-      console.log(response);
-      console.log(response.data.StatusCode);
+      console.log(this.clients)
     },
   },
 };
