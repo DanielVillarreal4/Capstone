@@ -982,11 +982,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\vueprojects\\capstone\\CapstoneAPI\\CapAPI\\CapAPI\\CapAPI.csproj",
+      "projectUniqueName": "C:\\vueprojects\\capstone\\CapstoneAPI\\CapAPI\\CapAPI.csproj",
       "projectName": "CapAPI",
-      "projectPath": "C:\\vueprojects\\capstone\\CapstoneAPI\\CapAPI\\CapAPI\\CapAPI.csproj",
+      "projectPath": "C:\\vueprojects\\capstone\\CapstoneAPI\\CapAPI\\CapAPI.csproj",
       "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-      "outputPath": "C:\\vueprojects\\capstone\\CapstoneAPI\\CapAPI\\CapAPI\\obj\\",
+      "outputPath": "C:\\vueprojects\\capstone\\CapstoneAPI\\CapAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",

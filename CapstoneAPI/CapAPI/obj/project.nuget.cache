@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KOI7+4DRSIsDCjVozDm5G89e+IHZxDJeTFxaICClmrA99P7JgOM8ff/QOvIe8FLGO2b6+pmfSJ/9yStKX0ATQg==",
+  "dgSpecHash": "3bS9pNL5zH19vweWFxrVc2tU6eNyAQs2doWrQNlcsb34viwoKfVFfvBhkKjxqN8jH5oQfRJ9F3DEyoH9vT0dtw==",
   "success": true,
-  "projectFilePath": "C:\\vueprojects\\capstone\\CapstoneAPI\\CapAPI\\CapAPI\\CapAPI.csproj",
+  "projectFilePath": "C:\\vueprojects\\capstone\\CapstoneAPI\\CapAPI\\CapAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.29\\microsoft.aspnetcore.authentication.jwtbearer.3.1.29.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.16\\microsoft.aspnetcore.jsonpatch.3.1.16.nupkg.sha512",
