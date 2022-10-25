@@ -1,29 +1,24 @@
-# Capstone
-First:
+# crud-app
 
-  Download NodeJS https://nodejs.org/en/
-  
-  Download VS Code https://code.visualstudio.com/
-    Click the checkbox for all the installation features and install.
-    
-    
-To view the frontend:
+## Project setup
+```
+npm install
+```
 
-Clone the repository to a location. 
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-Go into the frontend folder. 
+### Compiles and minifies for production
+```
+npm run build
+```
 
-Right click on an empty place in the folder, and then click "Open with Code"
+### Lints and fixes files
+```
+npm run lint
+```
 
-When VS Code opens, in the Terminal tab at the top. Open a new terminal. 
-
-  First check if nodeJS is installed with the following command: node -v
-  
-  IF NodeJS wasn't installed, try restarting your PC, then check for nodejs again with the same command.
-  
-  Assuming nodeJS is installed, run the following command: npm install --save --legacy-peer-deps
-  
-  Hopefully no errors occur. 
-  
-  
-Then to finally run the frontend, run the following command: npm run serve
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
