@@ -1,12 +1,12 @@
 <template>
   <div class="testing-auth">
     <!-- Check that the SDK client is not currently loading before accessing is methods -->
-    <div v-if="!$auth.loading">
+    <!-- <div v-if="!$auth.loading"> -->
       <!-- show login when not authenticated -->
-      <button v-if="!$auth.isAuthenticated" @click="login">Log in</button>
+      <!-- <button v-if="!$auth.isAuthenticated" @click="login">Log in</button> -->
       <!-- show logout when authenticated -->
-      <button v-if="$auth.isAuthenticated" @click="logout">Log out</button>
-    </div>
+      <!-- <button v-if="$auth.isAuthenticated" @click="logout">Log out</button> -->
+    <!-- </div> -->
     <v-data-table
       :headers="headers"
       :items="clients"
@@ -107,14 +107,12 @@
 </template>
 
 <script>
-// .. imports removed for brevity
 import firebase from "../firebaseInit.js";
 import { collection, addDoc } from "firebase/firestore";
 const db = firebase.firestore();
 const dbRef = collection(db, "clients");
 
 export default {
-  // name: "HelloWorld",
   name: "testing-auth",
   data: () => ({
     dialog: false,
@@ -253,6 +251,47 @@ export default {
         returnTo: window.location.origin,
       });
     },
+          editItem (item) {
+        this.editedIndex = this.desserts.indexOf(item)
+        this.editedItem = Object.assign({}, item)
+        this.dialog = true
+      },
+
+      deleteItem (item) {
+        this.editedIndex = this.desserts.indexOf(item)
+        this.editedItem = Object.assign({}, item)
+        this.dialogDelete = true
+      },
+
+      deleteItemConfirm () {
+        this.desserts.splice(this.editedIndex, 1)
+        this.closeDelete()
+      },
+
+      close () {
+        this.dialog = false
+        this.$nextTick(() => {
+          this.editedItem = Object.assign({}, this.defaultItem)
+          this.editedIndex = -1
+        })
+      },
+
+      closeDelete () {
+        this.dialogDelete = false
+        this.$nextTick(() => {
+          this.editedItem = Object.assign({}, this.defaultItem)
+          this.editedIndex = -1
+        })
+      },
+
+      save () {
+        if (this.editedIndex > -1) {
+          Object.assign(this.desserts[this.editedIndex], this.editedItem)
+        } else {
+          this.desserts.push(this.editedItem)
+        }
+        this.close()
+      },
     /*Vuefire CRUD */
     // createEmployee(name) {
     //   this.$firestoreRefs.cities.add({
@@ -277,6 +316,8 @@ export default {
   },
   mounted() {
     this.readClients();
+    // console.log("Window.location.origin: ")
+    // console.log(window.location.origin)
   },
 };
 </script>

@@ -10,7 +10,7 @@
                   <v-card-text class="mt-12">
                     <h4 class="text-center">Login in to Your Account</h4>
                     <h6 class="text-center grey--text">
-                      Log in to your account so you can continue builiding
+                      Log in to your account so you can continue building
                       <br />and editing your onboarding flows
                     </h6>
                     <v-row align="center" justify="center">
@@ -186,8 +186,6 @@
 </template>
 
 <script>
-// import axios from "axios";
-
 export default {
   data: () => ({
     step: 1,
@@ -213,49 +211,6 @@ export default {
       this.Password = "";
       this.confirmedPassword = "";
     },
-
-    // async createUser() {
-    //   const response = await axios.post("client", {
-    //     FName: this.FName,
-    //     MName: this.MName,
-    //     LName: this.LName,
-    //     Email: this.Email,
-    //     ClientPhoneNumber: this.ClientPhoneNumber,
-    //     Password: this.Password,
-    //   });
-    //   console.log(response);
-    //   console.log(response.data.StatusCode);
-    //   if (response.data.StatusCode == 200) {
-    //     this.resetInput();
-    //     this.step--;
-    //   }
-    // },
-    //  async loginUser() {
-    //   const response = await axios.get("client");
-
-    // //   , {
-    // //     params:{
-    // //     Email: this.Email,
-    // //     Password: this.Password,
-    // //     ReturnURL: "http://localhost:8080/"
-    // //   }
-    // //  }
-    //   console.log(response);
-    //   console.log(response.data.StatusCode);
-    // },
-    // loginUser() {
-    //   axios.get("client").then((response) => {
-    //     response.data.forEach((element) => {
-    //       if(element.Email === this.Email)
-    //       {
-    //       this.clients.push({   
-    //         Email: element.Email,
-    //       });
-    //       }
-    //     });
-    //   });
-    //   console.log(this.clients)
-    // },
   },
 };
 </script>
