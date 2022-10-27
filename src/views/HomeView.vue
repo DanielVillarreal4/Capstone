@@ -163,11 +163,12 @@ export default {
 /* text and background */
 .header {
   min-height: 90vh;
-  width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7));
-  background-position: center;
-  background-size: cover;
-  position: relative;
+width: 100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+url("https://cdn.vuetifyjs.com/images/carousel/planet.jpg");
+background-position: center;
+background-size: cover;
+position: relative;
 }
 
 /* logo size*/
