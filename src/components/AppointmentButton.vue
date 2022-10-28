@@ -312,7 +312,8 @@ export default {
   background: repeat;
   position: relative;
   cursor: pointer;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7));
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+url("https://cdn.vuetifyjs.com/images/carousel/planet.jpg");
   text-transform: unset;
   font-weight: unset;
 }
