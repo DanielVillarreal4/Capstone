@@ -20,9 +20,12 @@
         </template>
         <v-list>
           <v-list-item v-if="$auth.isAuthenticated"
-            ><v-btn width="100%" to="/profile">Profile</v-btn></v-list-item >
-          <v-list-item v-for="(item, i) in profileBtnLinks" :key="i">
-            <v-btn width="100%" link :to="item.to">{{ item.title }}</v-btn>
+
+            ><v-btn width="100%" to="/profile">Profile</v-btn></v-list-item
+          >
+          <v-list-item v-if="$auth.isAuthenticated" ><!-- v-for="(item, i) in profileBtnLinks" :key="i" -->
+            <v-btn width="100%" link to="/testingauth">Test</v-btn>
+
           </v-list-item>
 
           <v-list-item v-if="$auth.isAuthenticated">
@@ -77,8 +80,8 @@ export default {
       //{ icon: "mdi-account-circle", to: "/contact-us" },
     ],
     profileBtnLinks: [
-      { title: "Login", to: "/login" },
-      { title: "Registration", to: "/registration" },
+      // { title: "Login", to: "/login" },
+      // { title: "Registration", to: "/registration" },
       { title: "Test", icon: "mdi-paper", to: "/testingauth" },
     ],
    
