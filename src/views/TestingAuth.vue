@@ -1,12 +1,13 @@
 <template>
-  <div class="testing-auth">
+  <div class="testing-auth top-margin">
     <!-- Check that the SDK client is not currently loading before accessing is methods -->
     <!-- <div v-if="!$auth.loading"> -->
-      <!-- show login when not authenticated -->
-      <!-- <button v-if="!$auth.isAuthenticated" @click="login">Log in</button> -->
-      <!-- show logout when authenticated -->
-      <!-- <button v-if="$auth.isAuthenticated" @click="logout">Log out</button> -->
+    <!-- show login when not authenticated -->
+    <!-- <button v-if="!$auth.isAuthenticated" @click="login">Log in</button> -->
+    <!-- show logout when authenticated -->
+    <!-- <button v-if="$auth.isAuthenticated" @click="logout">Log out</button> -->
     <!-- </div> -->
+    <h1>Testing Client Storage</h1>
     <v-data-table
       :headers="headers"
       :items="clients"
@@ -16,7 +17,7 @@
     <v-dialog v-model="dialog" persistent max-width="600px">
       <template v-slot:activator="{ on, attrs }">
         <v-btn color="primary" dark v-bind="attrs" v-on="on">
-          Open Dialog
+          Create Client
         </v-btn>
       </template>
       <v-card>
@@ -103,16 +104,29 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+    <v-divider></v-divider>
+    <div class="top-margin">
+      <h1>Testing Appointments</h1>
+
+      <calendar />
+      <appointment-button />
+    </div>
   </div>
 </template>
 
 <script>
 import firebase from "../firebaseInit.js";
 import { collection, addDoc } from "firebase/firestore";
+import Calendar from "../components/Calendar.vue";
+import AppointmentButton from "../components/AppointmentButton.vue";
 const db = firebase.firestore();
 const dbRef = collection(db, "clients");
 
 export default {
+  components: {
+    Calendar,
+    AppointmentButton,
+  },
   name: "testing-auth",
   data: () => ({
     dialog: false,
@@ -195,8 +209,8 @@ export default {
     },
     readClients() {
       this.clients = [];
-      console.log("reading clients");
-      console.log(this.clientsData);
+      // console.log("reading clients");
+      // console.log(this.clientsData);
       db.collection("clients")
         .get()
         .then((querySnapshot) => {
@@ -210,7 +224,7 @@ export default {
               PhoneNumber: doc.data().PhoneNumber,
               Password: doc.data().Password,
             });
-            console.log(doc.id, " => ", doc.data());
+            // console.log(doc.id, " => ", doc.data());
           });
         })
         .catch((error) => {
@@ -251,47 +265,47 @@ export default {
         returnTo: window.location.origin,
       });
     },
-          editItem (item) {
-        this.editedIndex = this.desserts.indexOf(item)
-        this.editedItem = Object.assign({}, item)
-        this.dialog = true
-      },
+    editItem(item) {
+      this.editedIndex = this.desserts.indexOf(item);
+      this.editedItem = Object.assign({}, item);
+      this.dialog = true;
+    },
 
-      deleteItem (item) {
-        this.editedIndex = this.desserts.indexOf(item)
-        this.editedItem = Object.assign({}, item)
-        this.dialogDelete = true
-      },
+    deleteItem(item) {
+      this.editedIndex = this.desserts.indexOf(item);
+      this.editedItem = Object.assign({}, item);
+      this.dialogDelete = true;
+    },
 
-      deleteItemConfirm () {
-        this.desserts.splice(this.editedIndex, 1)
-        this.closeDelete()
-      },
+    deleteItemConfirm() {
+      this.desserts.splice(this.editedIndex, 1);
+      this.closeDelete();
+    },
 
-      close () {
-        this.dialog = false
-        this.$nextTick(() => {
-          this.editedItem = Object.assign({}, this.defaultItem)
-          this.editedIndex = -1
-        })
-      },
+    close() {
+      this.dialog = false;
+      this.$nextTick(() => {
+        this.editedItem = Object.assign({}, this.defaultItem);
+        this.editedIndex = -1;
+      });
+    },
 
-      closeDelete () {
-        this.dialogDelete = false
-        this.$nextTick(() => {
-          this.editedItem = Object.assign({}, this.defaultItem)
-          this.editedIndex = -1
-        })
-      },
+    closeDelete() {
+      this.dialogDelete = false;
+      this.$nextTick(() => {
+        this.editedItem = Object.assign({}, this.defaultItem);
+        this.editedIndex = -1;
+      });
+    },
 
-      save () {
-        if (this.editedIndex > -1) {
-          Object.assign(this.desserts[this.editedIndex], this.editedItem)
-        } else {
-          this.desserts.push(this.editedItem)
-        }
-        this.close()
-      },
+    save() {
+      if (this.editedIndex > -1) {
+        Object.assign(this.desserts[this.editedIndex], this.editedItem);
+      } else {
+        this.desserts.push(this.editedItem);
+      }
+      this.close();
+    },
     /*Vuefire CRUD */
     // createEmployee(name) {
     //   this.$firestoreRefs.cities.add({
@@ -336,5 +350,8 @@ export default {
 .v-application p,
 .v-application h1 {
   text-align: center;
+}
+.top-margin {
+  margin-top: 10%;
 }
 </style>

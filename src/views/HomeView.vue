@@ -28,7 +28,8 @@
         </h1>
         <p>Some quick example text content.</p>
         <!-- click one -->
-        <a href="" class="Click">Click Here</a>
+        <!-- <a href="" class="Click">Click Here</a> -->
+        <appointment-button/>
       </div>
     </section>
     <!------------------- About Us -------------------->
@@ -119,8 +120,13 @@
   </div>
 </template>
 <script>
+import AppointmentButton from "../components/AppointmentButton.vue";
+
 export default {
   name: "HomeView",
+  components: {
+    AppointmentButton,
+  },
   data() {
     return {
       items: [
