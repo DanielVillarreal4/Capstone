@@ -15,7 +15,7 @@
 
     
 
-    <div class="row align-items-center profile-header">
+<div class="row align-items-center profile-header">
       <div class="col-md-2 mb-3">
         <img
           :src="$auth.user.picture"

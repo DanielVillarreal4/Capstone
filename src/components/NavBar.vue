@@ -15,7 +15,10 @@
   // import AuthNav from '@/components/AuthNav';
 
   export default {
+  
     name: 'NavBar',
     components: { /*AuthNav,*/ MainNav },
+
   };
 </script>
+
