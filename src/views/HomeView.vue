@@ -188,6 +188,7 @@ nav {
   align-items: center;
 }
 
+
 /* text style*/
 .text-box {
   widows: 80%;

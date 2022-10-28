@@ -2,13 +2,16 @@
   <v-app id="inspire">
     <v-app-bar app color="primary" dark ma-0 ma-md-5 class="appBar">
       <v-app-bar-title class="appTitle">C & C Systems</v-app-bar-title>
+      
       <v-spacer></v-spacer>
       <v-divider
         vertical
         class="divider"
         style="border-color=white"
       ></v-divider>
-      <NavBar />
+
+      <NavBar v-if="!mobileView"/>
+
       <v-menu transition="slide-y-transition" bottom>
         <template v-slot:activator="{ on, attrs }">
           <v-btn class="pa-8 profileBtn" icon v-bind="attrs" v-on="on">
@@ -17,11 +20,14 @@
         </template>
         <v-list>
           <v-list-item v-if="$auth.isAuthenticated"
+
             ><v-btn width="100%" to="/profile">Profile</v-btn></v-list-item
           >
           <v-list-item v-if="$auth.isAuthenticated" ><!-- v-for="(item, i) in profileBtnLinks" :key="i" -->
             <v-btn width="100%" link to="/testingauth">Test</v-btn>
+
           </v-list-item>
+
           <v-list-item v-if="$auth.isAuthenticated">
             <LogoutButton style="width: 100%" />
           </v-list-item>
@@ -35,7 +41,7 @@
     <v-main>
       <router-view></router-view>
     </v-main>
-    <footer />
+    <footer/>
   </v-app>
 </template>
 
@@ -45,7 +51,11 @@ import LogoutButton from "./components/LogoutButton.vue";
 import LoginButton from "./components/LoginButton.vue";
 import NavBar from "@/components/NavBar";
 
+
+
+
 export default {
+
   components: {
     Loading,
     LogoutButton,
@@ -53,22 +63,37 @@ export default {
     NavBar,
   },
   data: () => ({
+
+    mobileView: false,
+    showNav: false,
+
+    return: {
+      mobileView: null,
+      showNav: false
+    },
+    
     drawer: null,
     items: [
       { title: "Home", icon: "mdi-home", to: "/" },
       { title: "About", icon: "mdi-help-box", to: "/about" },
       { title: "Contact Us", icon: "mdi-phone", to: "/contact-us" },
-      // { icon: "mdi-account-circle", to: "/contact-us" },
+      //{ icon: "mdi-account-circle", to: "/contact-us" },
     ],
     profileBtnLinks: [
       // { title: "Login", to: "/login" },
       // { title: "Registration", to: "/registration" },
       { title: "Test", icon: "mdi-paper", to: "/testingauth" },
     ],
-  }),
+   
+  }
+  
+  
+  ),
+  
+ 
 };
 </script>
-<style scoped>
+<style lang ="scss">
 #topbar {
   min-height: 64px;
 }
@@ -91,9 +116,16 @@ export default {
   padding-right: 30px;
   margin-right: 30px;
 }
-/* .profileBtn {
+ .profileBtn {
   margin-top: -0.6em;
-} */
+} 
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+}
 .trClass {
   border-color: white;
   align-self: stretch;
@@ -137,3 +169,4 @@ export default {
   align-items: center;
 }
 </style>
+
