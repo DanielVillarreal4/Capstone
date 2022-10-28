@@ -1,14 +1,14 @@
 <template>
   <div>
     <head>
-  <!--npm run serve-->
-  <!-- Page title -->
-  <title>About</title>
-  
-  <!-- icons library-->
+	<!-- npm run serve -->
+	<!-- Page title -->
+	<title>About</title>
+	
+	<!-- icons library-->
 <meta name="viewport" content="with=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -35,6 +35,7 @@
           </p>
         </div>
         <div class="about-usC">
+
           <v-img src="https://cdn.vuetifyjs.com/images/carousel/planet.jpg" alt="planet" max-width="500" max-height="400"
           style=" margin-left:10px; margin-bottom:5px" ></v-img>
         </div>
@@ -91,7 +92,7 @@
     </section>    
   </div>
 </template>
-<script>
+<!-- <script>
 // import axios from "axios";
 export default {
   name: "HomeView",
@@ -111,67 +112,67 @@ export default {
     };
   },
   methods: {
-    // getAllEmployees() {
-    //   axios.get("employee").then((response) => {
-    //     response.data.forEach((element) => {
-    //       this.employees.push({
-    //         AccessID: element.AccessID,
-    //         Email: element.Email,
-    //         EmployeeID: element.EmployeeID,
-    //         EmployeePhoneNumber: element.EmployeePhoneNumber,
-    //         FName: element.FName,
-    //         LName: element.LName,
-    //         MName: element.MName,
-    //       });
-    //     });
-    //   });
-    // },
-    // getAllClients() {
-    //   axios.get("client").then((response) => {
-    //     response.data.forEach((element) => {
-    //       this.clients.push({
-    //         AccessID: element.AccessID,
-    //         Email: element.Email,
-    //         ClientID: element.EmployeeID,
-    //         ClientPhoneNumber: element.EmployeePhoneNumber,
-    //         FName: element.FName,
-    //         LName: element.LName,
-    //         MName: element.MName,
-    //       });
-    //     });
-    //   });
-    // },
-    // getAllServices() {
-    //   axios.get("service").then((response) => {
-    //     response.data.forEach((element) => {
-    //       this.services.push({
-    //         ServiceID: element.ServiceID,
-    //         ServiceName: element.ServiceName,
-    //         ServiceDescription: element.ServiceDescription,
-    //       });
-    //     });
-    //   });
-    // },
-    // getAppointments() {
-    //   axios.get("appointment").then((response) => {
-    //     response.data.forEach((element) => {
-    //       this.appointments.push({
-    //         AppointmentID: element.AppointmentID,
-    //         DateCreated: element.DateCreated,
-    //         ClientID: element.ClientID,
-    //         EmployeeID: element.EmployeeID,
-    //         StreetAddress: element.StreetAddress,
-    //         City: element.City,
-    //         State: element.State,
-    //         ZipCode: element.ZipCode,
-    //         StartTime: element.StartTime,
-    //         EndTime: element.EndTime,
-    //         Cancel: element.Cancel,
-    //         Description: element.Description,
-    //       });
-    //     });
-    //   });
-    // },
+    getAllEmployees() {
+      axios.get("employee").then((response) => {
+        response.data.forEach((element) => {
+          this.employees.push({
+            AccessID: element.AccessID,
+            Email: element.Email,
+            EmployeeID: element.EmployeeID,
+            EmployeePhoneNumber: element.EmployeePhoneNumber,
+            FName: element.FName,
+            LName: element.LName,
+            MName: element.MName,
+          });
+        });
+      });
+    },
+    getAllClients() {
+      axios.get("client").then((response) => {
+        response.data.forEach((element) => {
+          this.clients.push({
+            AccessID: element.AccessID,
+            Email: element.Email,
+            ClientID: element.EmployeeID,
+            ClientPhoneNumber: element.EmployeePhoneNumber,
+            FName: element.FName,
+            LName: element.LName,
+            MName: element.MName,
+          });
+        });
+      });
+    },
+    getAllServices() {
+      axios.get("service").then((response) => {
+        response.data.forEach((element) => {
+          this.services.push({
+            ServiceID: element.ServiceID,
+            ServiceName: element.ServiceName,
+            ServiceDescription: element.ServiceDescription,
+          });
+        });
+      });
+    },
+    getAppointments() {
+      axios.get("appointment").then((response) => {
+        response.data.forEach((element) => {
+          this.appointments.push({
+            AppointmentID: element.AppointmentID,
+            DateCreated: element.DateCreated,
+            ClientID: element.ClientID,
+            EmployeeID: element.EmployeeID,
+            StreetAddress: element.StreetAddress,
+            City: element.City,
+            State: element.State,
+            ZipCode: element.ZipCode,
+            StartTime: element.StartTime,
+            EndTime: element.EndTime,
+            Cancel: element.Cancel,
+            Description: element.Description,
+          });
+        });
+      });
+    },
   },
   mounted: function () {
     this.getAllEmployees();
@@ -184,7 +185,7 @@ export default {
     console.log(this.appointments);
   },
 };
-</script>
+</script> -->
 
 <style scoped>
 .carouselClass {
@@ -201,7 +202,10 @@ export default {
 .About-header {
   height: 90vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+  min-height: 90vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), 
+  url("https://cdn.vuetifyjs.com/images/carousel/bird.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -210,6 +214,7 @@ export default {
 .About-header h1{
   margin-top: 100px;
 }
+
 
 /* about-us content */
 .about-us{
@@ -234,6 +239,7 @@ export default {
   
 }
 
+
 /* about-us content 1 */
 .about-us1 {
   width: 80%;
@@ -257,6 +263,7 @@ export default {
 .about-usC1 p{
   padding: 15px 0 25px;
 }
+
 
 .about-usC1 img {
   margin-left:10px; 
@@ -352,5 +359,4 @@ p {
   cursor: pointer;
 }
 </style>
-
 

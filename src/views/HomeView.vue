@@ -45,7 +45,7 @@
 
         <div class="text-box1">
           <!-- click one -->
-          <a href="about/one" class="Click1">Learn more</a>
+          <a href="about" class="Click1">Learn more</a>
         </div>
       </div>
       <div class="boxs">
