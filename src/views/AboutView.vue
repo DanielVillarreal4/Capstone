@@ -34,9 +34,9 @@
             Some quick example text content.Some quick example text content.Some quick example text content.
           </p>
         </div>
-        <div class="about-usC">
+        <div class="about-usCp">
 
-          <v-img src="https://cdn.vuetifyjs.com/images/carousel/planet.jpg" alt="planet" max-width="500" max-height="400"
+          <v-img src="https://cdn.vuetifyjs.com/images/carousel/planet.jpg" alt="planet" max-width="400" max-height="400"
           style=" margin-left:10px; margin-bottom:5px" ></v-img>
         </div>
       </div>
@@ -51,8 +51,8 @@
             Some quick example text content.Some quick example text content.Some quick example text content.
           </p>
         </div>
-        <div class="about-usC">
-          <v-img src="https://cdn.vuetifyjs.com/images/carousel/bird.jpg" alt="bird" max-width="500" height="400" 
+        <div class="about-usCp">
+          <v-img src="https://cdn.vuetifyjs.com/images/carousel/bird.jpg" alt="bird" max-width="400" height="400" 
           style=" margin-left:10px; margin-bottom:5px"></v-img>
         </div>
       </div>
@@ -67,8 +67,8 @@
             Some quick example text content.Some quick example text content.Some quick example text content.
           </p>
         </div>
-        <div class="about-usC">
-          <v-img src="https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg" alt="squirrel" max-width="500" height="400" > </v-img>
+        <div class="about-usCp">
+          <v-img src="https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg" alt="squirrel" max-width="400" height="400"> </v-img>
         </div>
       </div>
     </section>
@@ -200,7 +200,7 @@ export default {
 
 /* text and background */
 .About-header {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   min-height: 90vh;
   width: 100%;
@@ -227,7 +227,7 @@ export default {
 /* about-usC */
 .about-usC{
   flex-basis: 50%;
-  padding: 30px 10px;
+  padding: 3px 1px;
 }
 
 .about-usC h1{
@@ -240,34 +240,10 @@ export default {
 }
 
 
-/* about-us content 1 */
-.about-us1 {
-  width: 80%;
-  margin: auto;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  align-content: right;
-
-}
-
-/* about-usC */
-.about-usC1 {
-  flex-basis: 50%;
-  padding: 30px 10px;
-}
-
-.about-usC1 h2{
-  padding-top: 0;
-}
-
-.about-usC1 p{
-  padding: 15px 0 25px;
-}
-
-
-.about-usC1 img {
-  margin-left:10px; 
-  margin-bottom:5px
+.about-usCp img {
+  height: 90vh;
+  min-height: 90vh;
+  width: 10%;
   
 }
 
@@ -327,6 +303,99 @@ p {
 
 /* how it appear on phone users*/
 @media (max-width: 700px) {
+  
+  .About-header {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), 
+  url("https://cdn.vuetifyjs.com/images/carousel/bird.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.About-header h1{
+  margin-top: 40px;
+}
+
+
+/* about-us content */
+.about-us{
+  width: 80%;
+  margin: auto;
+  padding-top: 60px;
+}
+
+/* about-usC */
+.about-usC{
+  flex-basis: 50%;
+  padding: 3px 1px;
+}
+
+.about-usC h1{
+  padding-top: 0;
+}
+
+.about-usC p{
+  padding: 15px 0 25px;
+  
+}
+
+
+.about-usCp img {
+  height: 90vh;
+  min-height: 90vh;
+  width: 10%;
+  
+}
+
+/* text style*/
+.text-box {
+  widows: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  transform: translate(-50%, -50);
+}
+
+/* title About us text style*/
+.text-box h1 {
+  color: #c82020;
+  font-size: 60px;
+  margin-top: 30px;
+}
+
+/* under the title about us text style*/
+.text-box p {
+  margin: 5px 0 0px;
+  font-size: 15px;
+  color: aliceblue;
+}
+
+/*About text style */
+h1 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* the text nex to the pictures */
+h2 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* small text nex to the pictures*/
+p {
+  color: #777;
+  font-size: 15px;
+  font-weight: 250;
+  line-height: 25px;
+  padding: 15px;
+  text-align: center;
+}
+  
   .row {
     flex-direction: column;
   }
