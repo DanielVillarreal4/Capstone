@@ -10,13 +10,13 @@
       <v-list-item-icon>
         <v-icon>mdi-help-box</v-icon>
       </v-list-item-icon>
-      <router-link to="/about" class="nav-link"> About</router-link>
+      <router-link to="/about" class="nav-link"> About us</router-link>
     </v-list-item>
     <v-list-item class="list">
       <v-list-item-icon>
         <v-icon>mdi-phone</v-icon>
       </v-list-item-icon>
-      <router-link to="/contact-us" class="nav-link"> Contact Us</router-link>
+      <router-link to="/contact-us" class="nav-link"> Contact us</router-link>
     </v-list-item>
   </div>
 </template>
@@ -36,7 +36,6 @@ ul, .listGroup {
   margin: 0 !important;
   padding-top: 1em !important;
   overflow: hidden !important;
-  /* background-color: #333333; */
 }
 
 li, .list {
@@ -56,3 +55,4 @@ li, .list {
   margin-right: -12px;
 }
 </style>
+
