@@ -111,6 +111,17 @@
       <calendar />
       <appointment-button />
     </div>
+    <div class="top-margin">
+      <form ref="form" @submit.prevent="sendNotification">
+        <label>Name</label>
+        <input type="text" name="user_name" /><br />
+        <label>Email</label>
+        <input type="email" name="user_email" /><br />
+        <label>Message</label>
+        <textarea name="message"></textarea><br />
+        <input type="submit" value="Send" />
+      </form>
+    </div>
   </div>
 </template>
 
@@ -119,6 +130,8 @@ import firebase from "../firebaseInit.js";
 import { collection, addDoc } from "firebase/firestore";
 import Calendar from "../components/Calendar.vue";
 import AppointmentButton from "../components/AppointmentButton.vue";
+import emailjs from "@emailjs/browser";
+
 const db = firebase.firestore();
 const dbRef = collection(db, "clients");
 
@@ -175,6 +188,23 @@ export default {
     ],
   }),
   methods: {
+    sendNotification() {
+      emailjs
+        .sendForm(
+          "appointmentReminderID",
+          "appointmentTemplateID",
+          this.$refs.form,
+          "Xy5NcuED_93u0AuhC"
+        )
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result.text);
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    },
     getInput() {
       this.clientInput = {
         FName: this.firstName,
