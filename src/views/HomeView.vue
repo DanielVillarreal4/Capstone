@@ -18,8 +18,11 @@
       />
     </head>
 
+
     <!-- first section header -->
     <section class="header">
+      <!--<v-img src="pic0.png" alt="LOGO" max-width="120" max-height="120"></v-img>-->
+
       <!--  Welcomeing text-->
       <div class="text-box">
         <h1 class="text-center">
@@ -99,6 +102,7 @@
       ></iframe>
     </div> -->
 
+    
     <!--- foooter-->
 
     <section class="footer">
@@ -131,16 +135,16 @@ export default {
     return {
       items: [
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+          src: "pic0.png ",
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+          src: "pic1.png ",
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+          src: "pic2.png",
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+          src: "pic3.png",
         },
       ],
       images: [],
@@ -168,14 +172,15 @@ export default {
 
 /* text and background */
 .header {
-min-height: 90vh;
+min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("https://cdn.vuetifyjs.com/images/carousel/planet.jpg");
+url("pic0.png");
 background-position: center;
 background-size: cover;
 position: relative;
 }
+
 
 /* logo size
 nav img {
@@ -209,7 +214,8 @@ nav {
 /* Welcomee text style*/
 .text-box h1 {
   color: #c82020;
-  font-size: 60px;
+  font: italic 60px "Fira Sans", serif;
+  margin-top: 30px;
 }
 
 /* under the Welcomee text style*/
@@ -254,6 +260,7 @@ nav {
   widows: 80%;
   margin: auto;
   padding-top: 30px;
+  
 }
 
 /* CONTACT */
@@ -261,11 +268,12 @@ nav {
   widows: 80%;
   margin: auto;
   padding-top: 15px;
+  
 }
 
 /*About text style */
 h1 {
-  font-size: 40px;
+  font:  40px "Fira Sans", serif;
   text-align: center;
   font-weight: 500;
 }
@@ -273,7 +281,7 @@ h1 {
 /* small text under the About US text*/
 p {
   color: #777;
-  font-size: 15px;
+  font:  15px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -287,16 +295,17 @@ p {
   justify-content: space-between;
 }
 
+/*about inside the boxes */
 h2 {
-  font-size: 25px;
+  font: 30px "Fira Sans", serif;
   text-align: center;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 /* small text under the About US text*/
 p {
   color: #777;
-  font-size: 15px;
+  font:  25px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -327,16 +336,25 @@ p {
   height: 5;
 }
 
-h5 {
-  font-size: 25px;
+.text-center1 {
+  font: 15px "Fira Sans", serif;
+  font-weight: bold;
+  line-height: 25px;
+  padding: 15px;
   text-align: center;
-  font-weight: 500;
+  margin-bottom: 1%;
+}
+
+h5 {
+  font: 25px "Fira Sans", serif;
+  text-align: center;
+  font-weight: bold;
 }
 
 /* small text under the About US text*/
 p {
   color: #777;
-  font-size: 15px;
+  font: 15px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -380,11 +398,11 @@ p {
 
 /* how it appear on phone users*/
 @media(max-width: 700px){
-  .header {
+.header {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("https://cdn.vuetifyjs.com/images/carousel/planet.jpg");
+url("pic0.png");
 background-position: center;
 background-size: cover;
 position: relative;

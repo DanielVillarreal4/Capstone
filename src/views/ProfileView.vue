@@ -1,11 +1,11 @@
 <template>
   <div>
     <head>
-	<!-- npm run serve -->
-	<!-- Page title -->
-	<title>profile</title>
-	
-	<!-- icons library-->
+  <!-- npm run serve -->
+  <!-- Page title -->
+  <title>profile</title>
+  
+  <!-- icons library-->
 <meta name="viewport" content="with=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,16 +20,16 @@
         <img
           :src="$auth.user.picture"
           alt="User's profile picture"
-          class="rounded-circle img-fluid profile-picture"
-        />
+          class="rounded-circle img-fluid profile-picture"/>
       </div>
-
 
       <div class="col-md text-center text-md-left">
         <h2>{{ $auth.user.name }}</h2>
         <p class="lead text-muted">{{ $auth.user.email }}</p>
       </div>
     </div>
+
+
 
     <div class="row">
       <pre class="col-12 text-light bg-dark p-4">
@@ -64,7 +64,6 @@
 <style scoped>
 
 
-
 /* footer */
 @media (max-width: 700px) {
   .footer {
@@ -73,6 +72,7 @@
   padding: 1px 0;
   background: #1a1010;
 }
+
 
 .footer h4 {
   margin-bottom: 5px;
@@ -118,3 +118,4 @@
   cursor: pointer;
 }
 </style>
+
