@@ -18,8 +18,11 @@
       />
     </head>
 
+
     <!-- first section header -->
     <section class="header">
+      <!--<v-img src="pic0.png" alt="LOGO" max-width="120" max-height="120"></v-img>-->
+
       <!--  Welcomeing text-->
       <div class="text-box">
         <h1 class="text-center">
@@ -27,8 +30,7 @@
           Welcome to C and C Systems
         </h1>
         <p>Some quick example text content.</p>
-        <!-- click one -->
-        <!-- <a href="" class="Click">Click Here</a> -->
+      
         <appointment-button/>
       </div>
     </section>
@@ -87,6 +89,7 @@
         quick example text content
       </p>
     </div>
+    <!--
     <div class="LOCATION-box">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26051.924996458845!2d-93.1536566604492!3d35.293788800000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cc5308668a24f7%3A0xadcf40b5dc41909!2sArkansas%20Tech%20University!5e0!3m2!1sen!2sus!4v1664352396628!5m2!1sen!2sus"
@@ -97,8 +100,9 @@
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
-    </div>
+    </div> -->
 
+    
     <!--- foooter-->
 
     <section class="footer">
@@ -131,16 +135,16 @@ export default {
     return {
       items: [
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+          src: "pic0.png ",
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+          src: "pic1.png ",
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+          src: "pic2.png",
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+          src: "pic3.png",
         },
       ],
       images: [],
@@ -168,16 +172,17 @@ export default {
 
 /* text and background */
 .header {
-  min-height: 90vh;
+min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("https://cdn.vuetifyjs.com/images/carousel/planet.jpg");
+url("pic0.png");
 background-position: center;
 background-size: cover;
 position: relative;
 }
 
-/* logo size*/
+
+/* logo size
 nav img {
   width: 180px;
 }
@@ -187,7 +192,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-
+*/
 
 /* text style*/
 .text-box {
@@ -209,7 +214,8 @@ nav {
 /* Welcomee text style*/
 .text-box h1 {
   color: #c82020;
-  font-size: 60px;
+  font: italic 60px "Fira Sans", serif;
+  margin-top: 30px;
 }
 
 /* under the Welcomee text style*/
@@ -217,26 +223,6 @@ nav {
   margin: 5px 0 0px;
   font-size: 15px;
   color: aliceblue;
-}
-
-/* click under welcome here style */
-.Click {
-  display: inline-block;
-  text-decoration-line: none;
-  color: red;
-  border: 2px solid #ffffff;
-  padding: 15px 30px;
-  font-size: 15px;
-  background: repeat;
-  position: relative;
-  cursor: pointer;
-  margin-bottom: 25px;
-}
-
-.Click:hover {
-  border: 2px solid #4524bc;
-  background: #4524bc;
-  transition: 0.1s;
 }
 
 /* click inside about box */
@@ -274,6 +260,7 @@ nav {
   widows: 80%;
   margin: auto;
   padding-top: 30px;
+  
 }
 
 /* CONTACT */
@@ -281,11 +268,12 @@ nav {
   widows: 80%;
   margin: auto;
   padding-top: 15px;
+  
 }
 
 /*About text style */
 h1 {
-  font-size: 40px;
+  font:  40px "Fira Sans", serif;
   text-align: center;
   font-weight: 500;
 }
@@ -293,7 +281,7 @@ h1 {
 /* small text under the About US text*/
 p {
   color: #777;
-  font-size: 15px;
+  font:  15px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -307,16 +295,17 @@ p {
   justify-content: space-between;
 }
 
+/*about inside the boxes */
 h2 {
-  font-size: 25px;
+  font: 30px "Fira Sans", serif;
   text-align: center;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 /* small text under the About US text*/
 p {
   color: #777;
-  font-size: 15px;
+  font:  25px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -347,26 +336,34 @@ p {
   height: 5;
 }
 
-h5 {
-  font-size: 25px;
+.text-center1 {
+  font: 15px "Fira Sans", serif;
+  font-weight: bold;
+  line-height: 25px;
+  padding: 15px;
   text-align: center;
-  font-weight: 500;
+  margin-bottom: 1%;
+}
+
+h5 {
+  font: 25px "Fira Sans", serif;
+  text-align: center;
+  font-weight: bold;
 }
 
 /* small text under the About US text*/
 p {
   color: #777;
-  font-size: 15px;
+  font: 15px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
   text-align: center;
 }
 
-/* for pc and phone useers */
+/* for pc and phone useers 
 .LOCATION-box {
   flex-basis: 30%;
-  /* background: #a4dcff;*/
   border-radius: 1px;
   margin-bottom: 1%;
   box-sizing: border-box;
@@ -383,7 +380,7 @@ p {
   height: 100%;
   width: 100%;
   position: absolute;
-}
+} */
 
 /* Make effects when the mouse touch the box About us boxs*/
 .boxs:hover {
@@ -394,15 +391,62 @@ p {
   box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }
 
+/* 
 .LOCATION-box:hover {
   box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
-}
+}*/
 
 /* how it appear on phone users*/
-@media (max-width: 700px) {
-  .row {
+@media(max-width: 700px){
+.header {
+min-height: 100vh;
+width: 100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+url("pic0.png");
+background-position: center;
+background-size: cover;
+position: relative;
+}
+	.text-box h1{
+		font-size: 40px;
+	}
+
+	nav .fa{
+		display: block;
+		color: red;
+		margin: 10px;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.row {
     flex-direction: column;
   }
+
+  .footer {
+  width: 100%;
+  text-align: center;
+  padding: 1px 0;
+  background: #1a1010;
+}
+
+.footer h4 {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: azure;
+}
+
+.footer p {
+  color: azure;
+}
+
+/* icons size and style*/
+.icons .fa {
+  color: red;
+  margin: 0 13px;
+  cursor: pointer;
+}
+
 }
 
 /* footer */

@@ -1,6 +1,7 @@
 <template>
+  
   <div class="listGroup">
-    <v-list-item class="list" >
+    <v-list-item  class="list" >
       <v-list-item-icon>
         <v-icon>mdi-home</v-icon>
       </v-list-item-icon>
@@ -10,28 +11,36 @@
       <v-list-item-icon>
         <v-icon>mdi-help-box</v-icon>
       </v-list-item-icon>
-      <router-link to="/about" class="nav-link"> About us</router-link>
+      <router-link to="/about" class="nav-link"> About</router-link>
     </v-list-item>
     <v-list-item class="list">
       <v-list-item-icon>
         <v-icon>mdi-phone</v-icon>
       </v-list-item-icon>
-      <router-link to="/contact-us" class="nav-link"> Contact us</router-link>
+      <router-link to="/contact-us" class="nav-link"> Contact Us</router-link>
     </v-list-item>
   </div>
 </template>
 
 <script>
-export default {
-  name: "MainNav",
-};
+  export default{
+ 
+  }
 </script>
 
 <style scoped>
-nav{
-  padding: 0% 0% !important;
+
+/* to hide the regular menu for mobile users  */
+@media(max-width: 700px){
+  .list {
+  display: none;
 }
+
+}
+
+/* end */
 ul, .listGroup {
+  position: relative;
   list-style-type: none !important; 
   margin: 0 !important;
   padding-top: 1em !important;
@@ -44,7 +53,7 @@ li, .list {
 }
 
 .nav-link {
-  display: block;
+  display: flex;
   color: white;
   text-align: center;
   padding: 16px;
@@ -55,4 +64,8 @@ li, .list {
   margin-right: -12px;
 }
 </style>
+
+
+
+
 

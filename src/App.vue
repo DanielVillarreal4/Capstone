@@ -4,40 +4,134 @@
       <v-app-bar-title class="appTitle">C & C Systems</v-app-bar-title>
       
       <v-spacer></v-spacer>
-      <v-divider
+      <v-divider 
         vertical
         class="divider"
         style="border-color=white"
       ></v-divider>
 
-      <NavBar v-if="!mobileView"/>
-
-      <v-menu transition="slide-y-transition" bottom>
+      <NavBar/>
+      <v-menu   transition="slide-y-transition" bottom>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn class="pa-8 profileBtn" icon v-bind="attrs" v-on="on">
+          <v-btn  class="pa-8 profileBtn" icon v-bind="attrs" v-on="on">
             <v-icon>mdi-account-circle</v-icon>
-          </v-btn>
+          </v-btn >
+
+          <!-- Menu for mobile users -->
+          <v-btn  class="menu" icon v-bind="attrs" v-on="on">
+            <v-icon>mdi-25px mdi-format-align-justify</v-icon>
+          </v-btn >
         </template>
+
+        <div class="mobile">  
+          <router-link to="/" class="menu-t"> Home
+          <v-icon>mdi-home</v-icon>
+          </router-link>
+          
+          <router-link to="/about" class="menu-t"> About
+            <v-icon>mdi-help-box</v-icon>
+          </router-link>
+
+          <router-link to="/contact-us" class="menu-t"> Contact Us
+            <v-icon>mdi-phone</v-icon>
+          </router-link>
+        </div>
+          
+
+        <div class="not-mobile"> 
+             
+             <v-list-item v-if="$auth.isAuthenticated">
+                <router-link to="/profile" class="menu-t"> profile
+                  <v-icon>mdi-account</v-icon>
+                </router-link>
+                </v-list-item>
+    
+    
+              <v-list-item v-if="$auth.isAuthenticated" >
+                <router-link to="/testingauth" class="menu-t"> Test
+                  <v-icon>mdi-calendar-clock</v-icon>
+                </router-link>
+              </v-list-item>
+    
+            </div>
+              <!-- Authentication -->
+
+             
+          <!--  second menu
+        <v-btn class="primary" width="100%" link to="/">Home
+        <v-icon>mdi-home</v-icon>
+      </v-btn>
+
+      <v-btn  class="primary" width="100%" link to="/about">About
+        <v-icon>mdi-help-box</v-icon>
+      </v-btn>
+
+    <v-btn class="primary" width="100%" link to="/contact-us">Contact Us
+      <v-icon>mdi-phone</v-icon>
+    </v-btn>-->
+    
+  
         <v-list>
-          <v-list-item v-if="$auth.isAuthenticated"
-
-            ><v-btn width="100%" to="/profile">Profile</v-btn></v-list-item
-          >
-          <v-list-item v-if="$auth.isAuthenticated" ><!-- v-for="(item, i) in profileBtnLinks" :key="i" -->
-            <v-btn width="100%" link to="/testingauth">Test</v-btn>
-
-          </v-list-item>
+        
+          <!--
 
           <v-list-item v-if="$auth.isAuthenticated">
-            <LogoutButton style="width: 100%" />
+            <v-btn class="primary" width="100%" to="/profile">Profile
+              <v-icon>mdi-account</v-icon>
+            </v-btn> 
+            </v-list-item>
+
+          <v-list-item v-if="$auth.isAuthenticated" >
+            <v-btn class="primary" width="100%" link to="/testingauth">Test
+              <v-icon>mdi-calendar-clock</v-icon>
+            </v-btn>
           </v-list-item>
+
+           
+
+
+          <div class="not">
+              <v-list-item v-if="$auth.isAuthenticated">
+            <router-link to="/profile" class="menu-t"> profile
+              <v-icon>mdi-account</v-icon>
+            </router-link>
+            </v-list-item>
+            
+          <v-list-item v-if="$auth.isAuthenticated" >
+            <router-link to="/testingauth" class="menu-t"> Test
+              <v-icon>mdi-calendar-clock</v-icon>
+            </router-link>
+          </v-list-item>
+
+        </div>
+          -->
+         <div class="phone"> 
+          <v-list-item v-if="$auth.isAuthenticated">
+            <v-btn class="menu-t" width="100%" to="/profile">Profile
+              <v-icon>mdi-account</v-icon>
+            </v-btn> 
+            </v-list-item>
+
+          <v-list-item v-if="$auth.isAuthenticated" >
+            <v-btn class="menu-t" width="100%" link to="/testingauth">Test
+              <v-icon>mdi-calendar-clock</v-icon>
+            </v-btn>
+          </v-list-item>
+        </div>
+
+
+          <v-list-item v-if="$auth.isAuthenticated">
+        <LogoutButton class="menu-t" style="width: 100%"/>
+          </v-list-item>
+
           <v-list-item v-else>
-            <login-button style="width: 100%" />
+           <login-button class="menu-t" style="width: 100%"/>
           </v-list-item>
         </v-list>
       </v-menu>
     </v-app-bar>
-    <Loading v-if="$auth.isLoading" />
+    
+    <Loading class="menu-t" style="width: 100%"  v-if="$auth.isLoading" />
     <v-main>
       <router-view></router-view>
     </v-main>
@@ -52,8 +146,6 @@ import LoginButton from "./components/LoginButton.vue";
 import NavBar from "@/components/NavBar";
 
 
-
-
 export default {
 
   components: {
@@ -62,17 +154,8 @@ export default {
     LoginButton,
     NavBar,
   },
-  data: () => ({
+  data: () => ({  
 
-    mobileView: false,
-    showNav: false,
-
-    return: {
-      mobileView: null,
-      showNav: false
-    },
-    
-    drawer: null,
     items: [
       { title: "Home", icon: "mdi-home", to: "/" },
       { title: "About", icon: "mdi-help-box", to: "/about" },
@@ -93,7 +176,89 @@ export default {
  
 };
 </script>
-<style lang ="scss">
+<style scoped>
+
+.pa-8{
+    display: block; 
+  }
+  .mobile{
+    display: none;
+  }
+
+  .not-mobile{
+    display: none;
+  }
+  .menu{
+    display: none;
+  }
+
+  .phone{
+    display: block;
+  }
+@media(max-width: 700px){
+  .mobile{
+    position: relative;
+    display: inline-block;
+  }
+
+  .phone{
+    display: none;
+  }
+  .not-mobile{
+  display: block;
+	background: #3b56bf;
+  font-weight: bold;
+ 
+  }
+
+  .pa-8{
+    display: none; 
+  }
+
+.menu-t{
+  display: block;
+	background: #3b56bf;
+  position: relative;
+  color: red;
+  font:  20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px;
+  width: 100%;
+  text-decoration: none;
+
+  /*
+  display: block;
+	background: #3b56bf;
+  position: relative;
+  color: red;
+  font:  20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px;
+  width: 100%;
+  text-decoration: none;
+  
+  */
+}
+  .menu{
+
+    display: block;
+		top: 0;
+    position: right;
+		text-align: right;
+		z-index: 2;
+		transition: 0.10s;
+    /*
+    display: block;
+    position: right;
+    font-size: 10px;
+    text-align: right;*/
+
+  }
+
+
+}
 #topbar {
   min-height: 64px;
 }
@@ -101,7 +266,7 @@ export default {
   border-color: white;
 }
 .col {
-  padding: 2px;
+  padding: 5px;
 }
 
 #inspire
@@ -169,4 +334,6 @@ export default {
   align-items: center;
 }
 </style>
+
+
 

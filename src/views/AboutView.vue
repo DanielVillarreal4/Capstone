@@ -1,21 +1,27 @@
 <template>
   <div>
     <head>
-	<!-- npm run serve -->
-	<!-- Page title -->
-	<title>About</title>
-	
-	<!-- icons library-->
-<meta name="viewport" content="with=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+      <!-- Page title -->
+      <title>About</title>
 
-    <!-- first section header -->
-    <section class="About-header">
-      <!--  Welcomeing text-->
+      <!-- icons library-->
+      <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+    </head>
+  <!-- first section header -->
+  <section class="header">
+      <!--<v-img src="pic0.png" alt="LOGO" max-width="120" max-height="120"></v-img>-->
+
+      <!--  Contact text-->
       <div class="text-box">
         <h1 class="text-center">
           <br />
@@ -24,56 +30,57 @@
         <p>Some quick example text content.</p>
       </div>
     </section>
-    <!------------------- About Us content one -------------------->
+    <!------------------- About Us content -------------------->
+    <!-- first section header -->
 
-    <section class="about-us">
+    <section class="container">
       <div class="row">
-        <div class="about-usC">
-          <h1 id="one"> Some quick example text content. * learn more</h1>
-          <p>Some quick example text content.Some quick example text content.Some quick example text content.
+      <div class="text">
+        <h1>Some quick example text content.</h1>
+        <p>Some quick example text content.Some quick example text content.Some quick example text content.
             Some quick example text content.Some quick example text content.Some quick example text content.
-          </p>
-        </div>
-        <div class="about-usC">
-
-          <v-img src="https://cdn.vuetifyjs.com/images/carousel/planet.jpg" alt="planet" max-width="500" max-height="400"
-          style=" margin-left:10px; margin-bottom:5px" ></v-img>
-        </div>
+        </p>
       </div>
-    </section>
-   
-<!------------------- About Us content two-------------------->    
-<section class="about-us">
-      <div class="row">
-        <div class="about-usC">
-          <h2> Some quick example text content. * learn more</h2>
-          <p>Some quick example text content.Some quick example text content.Some quick example text content.
-            Some quick example text content.Some quick example text content.Some quick example text content.
-          </p>
-        </div>
-        <div class="about-usC">
-          <v-img src="https://cdn.vuetifyjs.com/images/carousel/bird.jpg" alt="bird" max-width="500" height="400" 
-          style=" margin-left:10px; margin-bottom:5px"></v-img>
-        </div>
+      <div class="image">
+        <img src="pic1.png">
       </div>
+    </div>
     </section>
 
-    <!------------------- About Us content three-------------------->    
-<section class="about-us">
+        <!-- seconed section header -->
+
+    <section class="container">
       <div class="row">
-        <div class="about-usC">
-          <h2> Some quick example text content. * learn more</h2>
-          <p>Some quick example text content.Some quick example text content.Some quick example text content.
+      <div class="text">
+        <h1>Some quick example text content.</h1>
+        <p>Some quick example text content.Some quick example text content.Some quick example text content.
             Some quick example text content.Some quick example text content.Some quick example text content.
-          </p>
-        </div>
-        <div class="about-usC">
-          <v-img src="https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg" alt="squirrel" max-width="500" height="400" > </v-img>
-        </div>
+        </p>
       </div>
+      <div class="image">
+        <img src="pic2.png">
+      </div>
+    </div>
     </section>
-    
+    <!-- third section header -->
+
+    <section class="container">
+      <div class="row">
+      <div class="text">
+        <h1>Some quick example text content.</h1>
+        <p>Some quick example text content.Some quick example text content.Some quick example text content.
+            Some quick example text content.Some quick example text content.Some quick example text content.
+        </p>
+      </div>
+      <div class="image">
+        <img src="pic3.png">
+      </div>
+    </div>
+    </section>
+
+
     <!--- foooter-->
+
     <section class="footer">
       <h4 class="text-center1">
         <br />
@@ -83,109 +90,44 @@
       <div class="footer-row"></div>
 
       <!-- owner media if any-->
-      <dic class="icons">
+      <div class="icons">
         <i class="fa fa-facebook"></i>
         <i class="fa fa-twitter"></i>
         <i class="fa fa-instagram"></i>
-      </dic>
+      </div>
       <p>COPYRIGHT © 2022 - ALL RIGHTS RESERVED.</p>
-    </section>    
+    </section>
   </div>
 </template>
-<!-- <script>
-// import axios from "axios";
+<script>
 export default {
-  name: "HomeView",
+  name: "AbouttView",
   data() {
     return {
       items: [
-        {src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",},
-        {src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",},
-        {src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",},
-        {src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",},
+        {
+          src: "pic0.png ",
+        },
+        {
+          src: "pic1.png ",
+        },
+        {
+          src: "pic2.png",
+        },
+        {
+          src: "pic3.png",
+        },
       ],
-      images:[],
+      images: [],
       employees: [],
       clients: [],
       services: [],
-      appointments: [],
     };
   },
-  methods: {
-    getAllEmployees() {
-      axios.get("employee").then((response) => {
-        response.data.forEach((element) => {
-          this.employees.push({
-            AccessID: element.AccessID,
-            Email: element.Email,
-            EmployeeID: element.EmployeeID,
-            EmployeePhoneNumber: element.EmployeePhoneNumber,
-            FName: element.FName,
-            LName: element.LName,
-            MName: element.MName,
-          });
-        });
-      });
-    },
-    getAllClients() {
-      axios.get("client").then((response) => {
-        response.data.forEach((element) => {
-          this.clients.push({
-            AccessID: element.AccessID,
-            Email: element.Email,
-            ClientID: element.EmployeeID,
-            ClientPhoneNumber: element.EmployeePhoneNumber,
-            FName: element.FName,
-            LName: element.LName,
-            MName: element.MName,
-          });
-        });
-      });
-    },
-    getAllServices() {
-      axios.get("service").then((response) => {
-        response.data.forEach((element) => {
-          this.services.push({
-            ServiceID: element.ServiceID,
-            ServiceName: element.ServiceName,
-            ServiceDescription: element.ServiceDescription,
-          });
-        });
-      });
-    },
-    getAppointments() {
-      axios.get("appointment").then((response) => {
-        response.data.forEach((element) => {
-          this.appointments.push({
-            AppointmentID: element.AppointmentID,
-            DateCreated: element.DateCreated,
-            ClientID: element.ClientID,
-            EmployeeID: element.EmployeeID,
-            StreetAddress: element.StreetAddress,
-            City: element.City,
-            State: element.State,
-            ZipCode: element.ZipCode,
-            StartTime: element.StartTime,
-            EndTime: element.EndTime,
-            Cancel: element.Cancel,
-            Description: element.Description,
-          });
-        });
-      });
-    },
-  },
-  mounted: function () {
-    this.getAllEmployees();
-    this.getAllClients();
-    this.getAllServices();
-    this.getAppointments();
-    console.log(this.employees);
-    console.log(this.clients);
-    console.log(this.services);
-    console.log(this.appointments);
-  },
+  methods: {},
+  mounted: function () {},
 };
-</script> -->
+</script>
 
 <style scoped>
 .carouselClass {
@@ -198,78 +140,70 @@ export default {
   text-align: center;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+}
 /* text and background */
-.About-header {
-  height: 100vh;
-  width: 100%;
-  min-height: 90vh;
-  width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), 
-  url("https://cdn.vuetifyjs.com/images/carousel/bird.jpg");
-  background-position: center;
-  background-size: cover;
-  position: relative;
+.header {
+min-height: 100vh;
+width: 100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+url("pic0.png");
+background-position: center;
+background-size: cover;
+position: relative;
 }
 
-.About-header h1{
-  margin-top: 100px;
+.container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+      }
+      img {
+        width: 100%;
+        border-radius: 60px;
+        max-height:  10cm;
+      }
+      .image {
+        flex-basis: 50%;
+        order: 2;
+      }
+
+/*
+ .text {
+        color: #CD5C5C;
+        padding-left: 30px;
+        font: italic 10px "Fira Sans", serif;
+      }
+
+*/
+      .text {
+        color: #CD5C5C;
+        padding-left: 30px 10px;
+        color: #CD5C5C;
+        flex-basis: 30%;
+        background: rgb(255, 253, 253);
+        border-radius: 60px;
+        margin-bottom: 2%;
+        font: italic 10px "Fira Sans", serif;
+        box-sizing: border-box;
+        transition: 0.5s;
+        font: italic 10px "Fira Sans", serif;
+      }
+
+  .text:hover {
+  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }
 
-
-/* about-us content */
-.about-us{
-  width: 80%;
-  margin: auto;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
-/* about-usC */
-.about-usC{
-  flex-basis: 50%;
-  padding: 30px 10px;
-}
-
-.about-usC h1{
-  padding-top: 0;
-}
-
-.about-usC p{
-  padding: 15px 0 25px;
+.text p{
+  color: #837c7c;
+  padding: 5px 0 2px;
+  font: 20px "Fira Sans", serif;
   
 }
 
-
-/* about-us content 1 */
-.about-us1 {
-  width: 80%;
-  margin: auto;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  align-content: right;
-
-}
-
-/* about-usC */
-.about-usC1 {
-  flex-basis: 50%;
-  padding: 30px 10px;
-}
-
-.about-usC1 h2{
-  padding-top: 0;
-}
-
-.about-usC1 p{
-  padding: 15px 0 25px;
-}
-
-
-.about-usC1 img {
-  margin-left:10px; 
-  margin-bottom:5px
-  
-}
 
 /* text style*/
 .text-box {
@@ -280,14 +214,14 @@ export default {
   transform: translate(-50%, -50);
 }
 
-/* title About us text style*/
+/* Welcomee text style*/
 .text-box h1 {
   color: #c82020;
-  font-size: 60px;
+  font:  60px "Fira Sans", serif;
   margin-top: 30px;
 }
 
-/* under the title about us text style*/
+/* under the Welcomee text style*/
 .text-box p {
   margin: 5px 0 0px;
   font-size: 15px;
@@ -296,22 +230,15 @@ export default {
 
 /*About text style */
 h1 {
-  font-size: 40px;
+  font:  40px "Fira Sans", serif;
   text-align: center;
   font-weight: 500;
 }
 
-/* the text nex to the pictures */
-h2 {
-  font-size: 40px;
-  text-align: center;
-  font-weight: 500;
-}
-
-/* small text nex to the pictures*/
+/* small text under the About US text*/
 p {
   color: #777;
-  font-size: 15px;
+  font:  15px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -325,11 +252,127 @@ p {
   justify-content: space-between;
 }
 
+/*about inside the boxes */
+h2 {
+  font: 30px "Fira Sans", serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* small text under the About US text*/
+p {
+  color: #777;
+  font:  25px "Fira Sans", serif;
+  font-weight: 250;
+  line-height: 25px;
+  padding: 15px;
+  text-align: center;
+}
+.text-center1 {
+  font: 15px "Fira Sans", serif;
+  font-weight: bold;
+  line-height: 25px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+h5 {
+  font: 25px "Fira Sans", serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* small text under the About US text*/
+p {
+  color: #777;
+  font: 15px "Fira Sans", serif;
+  font-weight: 250;
+  line-height: 25px;
+  padding: 15px;
+  text-align: center;
+}
+
 /* how it appear on phone users*/
-@media (max-width: 700px) {
-  .row {
+@media(max-width: 700px){
+.header {
+min-height: 100vh;
+width: 100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+url("pic0.png");
+background-position: center;
+background-size: cover;
+position: relative;
+}
+
+
+.text-box {
+  widows: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  transform: translate(-50%, -50);
+}
+.container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+      }
+      img {
+        width: 100%;
+        border-radius: 60px;
+        max-height:  10cm;
+      }
+      .image {
+        flex-basis: 50%;
+        order: 2;
+      }
+      .text {
+        color: #CD5C5C;
+        padding-left: 30px;
+        font: italic 10px "Fira Sans", serif;
+      }
+
+	.text-box h1{
+		font-size: 40px;
+	}
+
+	nav .fa{
+		display: block;
+		color: red;
+		margin: 10px;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.row {
     flex-direction: column;
   }
+
+  .footer {
+  width: 100%;
+  text-align: center;
+  padding: 1px 0;
+  background: #1a1010;
+}
+
+.footer h4 {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: azure;
+}
+
+.footer p {
+  color: azure;
+}
+
+/* icons size and style*/
+.icons .fa {
+  color: red;
+  margin: 0 13px;
+  cursor: pointer;
+}
+
 }
 
 /* footer */
@@ -359,4 +402,5 @@ p {
   cursor: pointer;
 }
 </style>
+
 
