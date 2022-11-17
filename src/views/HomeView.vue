@@ -22,7 +22,7 @@
     <!-- first section header -->
     
     <section class="header">
-      <img src="CC_Icon.png" alt="LOGO"  height="120">
+      <img src="../../public/CC_Icon.png" alt="LOGO"  height="120">
 
       <!--  Welcomeing text-->
       <div class="text-box">
@@ -109,7 +109,7 @@
       </p>
       <h4 class="text-center1">      
       <img class="mx-auto w-2/3 sm:w-2/3 md:w-1/2 lg:w-2/3" 
-      src="label.png">
+      src="../../public/label.png">
     </h4>
     </div>
    
@@ -151,19 +151,19 @@ export default {
     return {
       items: [
         {
-          src: "pic0.png ",
+          src: "../../public/pic0.png ",
         },
         {
-          src: "pic1.png ",
+          src: "../../public/pic1.png ",
         },
         {
-          src: "pic2.png",
+          src: "../../public/pic2.png",
         },
         {
-          src: "pic3.png",
+          src: "../../public/pic3.png",
         },
         {
-          src: "label.png",
+          src: "../../public/label.png",
         },
       ],
       images: [],
@@ -201,7 +201,7 @@ export default {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("pic0.png");
+url("../../public/pic0.png");
 background-position: center;
 background-size: cover;
 position: relative;
@@ -437,7 +437,7 @@ p {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("pic0.png");
+url("../../public/pic0.png");
 background-position: center;
 background-size: cover;
 position: relative;

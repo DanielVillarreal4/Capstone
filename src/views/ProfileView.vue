@@ -66,7 +66,7 @@
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("pic0.png");
+url("../../public/pic0.png");
 background-position: center;
 background-size: cover;
 display: flex;
