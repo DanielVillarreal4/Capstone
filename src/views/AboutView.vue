@@ -18,7 +18,7 @@
       />
     </head>
   <!-- first section header -->
-  <section class="header">
+  <section class="About">
       <!--<v-img src="pic0.png" alt="LOGO" max-width="120" max-height="120"></v-img>-->
 
       <!--  Contact text-->
@@ -27,7 +27,6 @@
           <br />
           About us
         </h1>
-        <p>Some quick example text content.</p>
       </div>
     </section>
     <!------------------- About Us content -------------------->
@@ -84,16 +83,21 @@
     <section class="footer">
       <h4 class="text-center1">
         <br />
-        About Us
+        Follow us
       </h4>
-      <p>Some quick example text content.</p>
       <div class="footer-row"></div>
 
       <!-- owner media if any-->
       <div class="icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-instagram"></i>
+
+        <a href = "https://www.facebook.com/" target="_blank" style="color:#azure; text-decoration:none;">
+          <i class="fa fa-facebook"></i> </a>
+        
+          <a href = "https://www.twitter.com/" target="_blank" style="color:#azure; text-decoration:none;">
+            <i class="fa fa-twitter"></i> </a>
+
+          <a href = "https://www.instagram.com/" target="_blank" style="color:#azure; text-decoration:none;">
+            <i class="fa fa-instagram"></i> </a>
       </div>
       <p>COPYRIGHT © 2022 - ALL RIGHTS RESERVED.</p>
     </section>
@@ -140,13 +144,15 @@ export default {
   text-align: center;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-	font-family: 'Source Sans Pro', sans-serif;
+* {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
 }
+
 /* text and background */
-.header {
+.About {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
@@ -294,8 +300,8 @@ p {
 }
 
 /* how it appear on phone users*/
-@media(max-width: 700px){
-.header {
+@media(max-width: 768px){
+.About {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),

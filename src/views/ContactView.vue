@@ -20,7 +20,7 @@
 
 
     <!-- first section header -->
-    <section class="header">
+    <section class="Contact-header">
       <!--<v-img src="pic0.png" alt="LOGO" max-width="120" max-height="120"></v-img>-->
 
       <!--  Contact text-->
@@ -29,11 +29,12 @@
           <br />
           Contact us
         </h1>
-        <p>Some quick example text content.</p>
       </div>
     </section>
+
+
     <!------------------- About Us -------------------->
-    <section class="About"></section>
+    <section class="About">
     <h1>About Us</h1>
     <p>Learn more</p>
     <div class="row">
@@ -43,10 +44,7 @@
           Some quick example text content Some quick example text content Some
           quick example text content
         </p>
-
-        <div class="text-box1">
-          <!-- click one -->
-        </div>
+      
       </div>
       <div class="boxs">
         <h2>About us</h2>
@@ -54,9 +52,7 @@
           Some quick example text content Some quick example text content Some
           quick example text content
         </p>
-        <div class="text-box1">
-          <!-- click one -->
-        </div>
+      
       </div>
       <div class="boxs">
         <h2>About us</h2>
@@ -64,26 +60,70 @@
           Some quick example text content Some quick example text content Some
           quick example text content
         </p>
-        <div class="text-box1">
-          <!-- click one -->
-        </div>
       </div>
     </div>
+  </section>
     <!------------------- CONTACT us ------------------>
 
-    <section class="CONTACT"></section>
+    <section class="CONTACT">
     <div class="CONTACT-boxs">
       <h1>Contact Us</h1>
-      <p>
-        Some quick example text content Some quick example text content Some
-        quick example text content
-      </p>
+      <div class="row1">
+      <div class="boxs1">
+        <p>
+          JASON L. CATES
+        </p>
+        <v-icon>mdi-email</v-icon>
+
+        <a href = "mailto:jcates@catessecurity.com" target="_blank" style="color:#000000; text-decoration:none;">
+          jcates@catessecurity.com
+        </a>
+        <p>
+          OWNER/OPERATIONS MANAGER
+        </p>
+      </div>
+      <div class="boxs1">
+        <p>
+          PAUL CATES        
+        </p>
+        <v-icon>mdi-email</v-icon>
+        <a href = "mailto:pcates@catessecurity.com" target="_blank" style="color:#000000; text-decoration:none;">
+          pcates@catessecurity.com
+        </a>
+        
+        <p>
+          OWNER/JOB SUPERVISOR
+        </p>
+
+      </div>
+    </div>
       <h5>C&C System</h5>
       <p>
-        Some quick example text content Some quick example text content Some
-        quick example text content
+        C&C Systems is a business built on a strong 
+        foundation. This foundation has many layers. 
+        First and foremost, we are a Christian-based 
+        company and believe God, and he will always be our strength. 
+        God will always provide. The next layer of our foundation is made up of family. 
+        Our family is made up of more than flesh and the blood that runs through our veins. 
+        Our family is always constantly growing, and we strive to treat our customers as if they 
+        truly were our own flesh and blood. Friends, all I can say is that you can never have too 
+        many and we look for friendship wherever we go. With a foundation made up of God, family, 
+        and friends, where can you go wrong with anything you try to accomplish as company.
+ Our company is based on security, and we know this better than most. One of our owners served his 
+ country for more than 24 years of his life fighting for all Americans security and freedoms. 
+ C&C Systems understand what it takes to take protect what you have and the safety of the loved ones in our lives.
+ If you are looking for a company that treats you like family and friends, with more than 33 years of 
+ combined experience, then you should look no further. C&C Systems will be there insured you can protect 
+ what you have earned and your loved one’s safety.
+ 
+ 
       </p>
+      <h4 class="text-center1">      
+      <img class="mx-auto w-2/3 sm:w-2/3 md:w-1/2 lg:w-2/3" 
+      src="label.png">
+    </h4>
     </div>
+  </section>
     <!--
     <div class="LOCATION-box">
       <iframe
@@ -97,22 +137,30 @@
       ></iframe>
     </div> -->
 
+    <section class="label">  
+      
+      
+    </section>
     
     <!--- foooter-->
 
-    <section class="footer">
+    <section class="footer">   
       <h4 class="text-center1">
         <br />
-        About Us
+        Follow us
       </h4>
-      <p>Some quick example text content.</p>
       <div class="footer-row"></div>
 
       <!-- owner media if any-->
       <div class="icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-instagram"></i>
+        <a href = "https://www.facebook.com/" target="_blank" style="color:#azure; text-decoration:none;">
+          <i class="fa fa-facebook"></i> </a>
+        
+          <a href = "https://www.twitter.com/" target="_blank" style="color:#azure; text-decoration:none;">
+            <i class="fa fa-twitter"></i> </a>
+
+          <a href = "https://www.instagram.com/" target="_blank" style="color:#azure; text-decoration:none;">
+            <i class="fa fa-instagram"></i> </a>
       </div>
       <p>COPYRIGHT © 2022 - ALL RIGHTS RESERVED.</p>
     </section>
@@ -159,13 +207,14 @@ export default {
   text-align: center;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-	font-family: 'Source Sans Pro', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 400;
 }
 /* text and background */
-.header {
+.Contact-header {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
@@ -219,27 +268,6 @@ nav {
   color: aliceblue;
 }
 
-/* click inside about box */
-.Click1 {
-  display: inline-block;
-  text-decoration-line: none;
-  color: red;
-  border: 2px solid #535151;
-  padding: 15px 30px;
-  font-size: 15px;
-  background: repeat;
-  position: relative;
-  cursor: pointer;
-  border-radius: 60px;
-  margin-bottom: 25px;
-}
-
-.Click1:hover {
-  border: 2px solid #4524bc;
-  background: #4524bc;
-  border-radius: 60px;
-  transition: 0.1s;
-}
 .text-box1 {
   widows: 10%;
   margin: auto;
@@ -265,17 +293,19 @@ nav {
   
 }
 
-/*About text style */
+/*About us and contact use  text style */
 h1 {
   font:  40px "Fira Sans", serif;
   text-align: center;
   font-weight: 500;
 }
 
+
+
 /* small text under the About US text*/
-p {
+.About p {
   color: #777;
-  font:  15px "Fira Sans", serif;
+  font:  20px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -289,22 +319,35 @@ p {
   justify-content: space-between;
 }
 
+.row1 {
+  margin: 5%;
+  display: flex;
+  text-align: center;
+  justify-content:space-around;
+  font: 15px "Fira Sans", serif;
+
+}
+
+
 /*about inside the boxes */
-h2 {
+.About h2 {
   font: 30px "Fira Sans", serif;
   text-align: center;
   font-weight: bold;
 }
 
 /* small text under the About US text*/
-p {
+.boxs p {
   color: #777;
-  font:  25px "Fira Sans", serif;
+  font:  15px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
   text-align: center;
+  text-align: center;
+  text-decoration: none;
 }
+
 
 /* CONTACT, PHONE, work and location style*/
 .boxs {
@@ -314,9 +357,20 @@ p {
   margin-bottom: 2%;
   padding: 10px 10px;
   box-sizing: border-box;
+  text-align: center;
   transition: 0.5s;
 }
 
+.boxs1 {
+  flex-basis: 30%;
+  background: rgb(253, 251, 251);
+  border-radius: 60px;
+  margin-bottom: 2%;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: 0.5s;
+}
 .CONTACT-boxs {
   flex-basis: 30%;
   /*background: #f8f2f2;*/
@@ -328,24 +382,37 @@ p {
   margin-bottom: 1%;
   position: relative;
   height: 5;
+  margin-bottom: 1%;
 }
 
 .text-center1 {
   font: 15px "Fira Sans", serif;
   font-weight: bold;
   line-height: 25px;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   margin-bottom: 1%;
 }
 
-h5 {
+.CONTACT-boxs h5 {
   font: 25px "Fira Sans", serif;
   text-align: center;
   font-weight: bold;
 }
 
-/* small text under the About US text*/
+.CONTACT-boxs h1 {
+  font: 40px "Fira Sans", serif;
+  text-align: center;
+  font-weight: 250;
+}
+.CONTACT-boxs p {
+  font: 15px "Fira Sans", serif;
+  font-weight: 250;
+  line-height: 25px;
+  padding: 15px;
+  text-align: center;
+}
+/* small text under the About US and inside the boxestext*/
 p {
   color: #777;
   font: 15px "Fira Sans", serif;
@@ -389,10 +456,12 @@ p {
 .LOCATION-box:hover {
   box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }*/
-
+.footer a {
+  color: azure;
+}
 /* how it appear on phone users*/
-@media(max-width: 700px){
-.header {
+@media(max-width: 768px){
+.Contact-header {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
@@ -416,11 +485,21 @@ position: relative;
     flex-direction: column;
   }
 
+  .row1 {
+    flex-direction: column;
+
+}
   .footer {
   width: 100%;
   text-align: center;
   padding: 1px 0;
   background: #1a1010;
+}
+
+.label {
+  width: 100%;
+  text-align: center;
+  padding: 1px 0;
 }
 
 .footer h4 {
@@ -434,6 +513,9 @@ position: relative;
   color: azure;
 }
 
+.footer a {
+  color: azure;
+}
 /* icons size and style*/
 .icons .fa {
   color: red;
@@ -443,6 +525,11 @@ position: relative;
 
 }
 
+.label {
+  width: 100%;
+  text-align: center;
+  padding: 1px 0;
+}
 /* footer */
 /* title text size and style*/
 .footer {
@@ -454,7 +541,7 @@ position: relative;
 
 .footer h4 {
   margin-bottom: 5px;
-  margin-top: 20px;
+  margin-top: 5px;
   font-weight: 600;
   color: azure;
 }

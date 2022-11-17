@@ -5,19 +5,19 @@
       <v-list-item-icon>
         <v-icon>mdi-home</v-icon>
       </v-list-item-icon>
-      <router-link to="/" class="nav-link"> Home</router-link>
+      <a href="/" class="nav-link">Home</a>
     </v-list-item>
     <v-list-item class="list">
       <v-list-item-icon>
         <v-icon>mdi-help-box</v-icon>
       </v-list-item-icon>
-      <router-link to="/about" class="nav-link"> About</router-link>
+      <a href="/about" class="nav-link">About</a>
     </v-list-item>
     <v-list-item class="list">
       <v-list-item-icon>
         <v-icon>mdi-phone</v-icon>
       </v-list-item-icon>
-      <router-link to="/contact-us" class="nav-link"> Contact Us</router-link>
+      <a href="/contact-us" class="nav-link">Contact Us</a>
     </v-list-item>
   </div>
 </template>
