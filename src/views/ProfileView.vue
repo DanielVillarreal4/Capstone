@@ -13,48 +13,48 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+
+
+<section class="profile-info">
+    <div class="box">
+      
+      <img :src="$auth.user.picture" alt="User's profile picture" class="user-picture">
+      <h2> Basic info</h2>
+      <div class="box2">
+
+    <h3>Full Name: {{ $auth.user.name }} </h3>
+    <h3>nickname: {{ $auth.user.nickname }} </h3>
+    <h3>Name: {{ $auth.user.given_name }} </h3>  
+    <h3>Family Name: {{ $auth.user.family_name }} </h3>  
+    <h3>Phone: {{ $auth.user.phone }} </h3>  
+    <h3>Email: {{ $auth.user.email }} </h3>
     
-
-<div class="row align-items-center profile-header">
-      <div class="col-md-2 mb-3">
-        <img
-          :src="$auth.user.picture"
-          alt="User's profile picture"
-          class="rounded-circle img-fluid profile-picture"/>
-      </div>
-
-      <div class="col-md text-center text-md-left">
-        <h2>{{ $auth.user.name }}</h2>
-        <p class="lead text-muted">{{ $auth.user.email }}</p>
       </div>
     </div>
+  </section>
 
 
 
-    <div class="row">
-      <pre class="col-12 text-light bg-dark p-4">
-{{
-        JSON.stringify($auth.user, null, 2)
-      }}</pre
-      >
-    </div>
-
-    
     <!--- foooter-->
-    <section class="footer">
+   
+    <section class="footer">   
       <h4 class="text-center1">
-        <br />
-        About Us
+        Follow us
+        <P></P>
       </h4>
-      <p>Some quick example text content.</p>
       <div class="footer-row"></div>
 
       <!-- owner media if any-->
-      <dic class="icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-instagram"></i>
-      </dic>
+      <div class="icons">
+        <a href = "https://www.facebook.com/" target="_blank" style="color:#azure; text-decoration:none;">
+          <i class="fa fa-facebook"></i> </a>
+        
+          <a href = "https://www.twitter.com/" target="_blank" style="color:#azure; text-decoration:none;">
+            <i class="fa fa-twitter"></i> </a>
+
+          <a href = "https://www.instagram.com/" target="_blank" style="color:#azure; text-decoration:none;">
+            <i class="fa fa-instagram"></i> </a>
+      </div>
       <p>COPYRIGHT © 2022 - ALL RIGHTS RESERVED.</p>
     </section>
 
@@ -62,16 +62,137 @@
 </template>
 
 <style scoped>
+.profile-info{
+min-height: 100vh;
+width: 100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+url("pic0.png");
+background-position: center;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
+.box{
+  background: #0a2953;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  padding: 15px 40px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  font: 15px "Fira Sans", serif;
+  font-weight: 250;
+  border-radius: 30px;
+}
+
+.box2 {
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font: 15px "Fira Sans", serif;
+  font-weight: 250;
+  margin-top: 20px;
+}
+
+.box2 h3 {
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font: 20px "Fira Sans", serif;
+  font-weight: 250;
+  margin-top: 10px;
+}
+
+.user-picture{
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 5px;
+}
+
+p {
+  color: #777;
+  font: 15px "Fira Sans", serif;
+  font-weight: 250;
+  line-height: 25px;
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+/* follow us*/
+h4 {
+  font:  15px "Fira Sans", serif;
+  text-align: center;
+  font-weight: 500;
+}
 
 /* footer */
 @media (max-width: 700px) {
+
+  .profile-info{
+min-height: 100vh;
+width: 100%;
+background-position: center;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.box{
+  background: #0a2953;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  padding:30px 50px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  font: 15px "Fira Sans", serif;
+  font-weight: 250;
+  border-radius: 30px;
+}
+
+.box2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font: 15px "Fira Sans", serif;
+  font-weight: 250;
+  margin-top: 20px;
+}
+
+.box2 h3 {
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font: 15px "Fira Sans", serif;
+  font-weight: 250;
+  margin-top: 5px;
+}
+.user-picture{
+  width: 100px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 5px;
+}
+
+
   .footer {
   width: 100%;
   text-align: center;
   padding: 1px 0;
   background: #1a1010;
 }
+p {
+  color: #777;
+  font: 15px "Fira Sans", serif;
+  font-weight: 250;
+  line-height: 25px;
+  padding: 15px;
+  text-align: center;
+}
+
+
 
 
 .footer h4 {
@@ -118,4 +239,3 @@
   cursor: pointer;
 }
 </style>
-
