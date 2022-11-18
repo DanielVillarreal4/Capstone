@@ -21,7 +21,7 @@
 
     <!-- first section header -->
     <section class="Contact-header">
-      <!--<v-img src="pic0.png" alt="LOGO" max-width="120" max-height="120"></v-img>-->
+      <!--<v-img src="../../public/pic0.png" alt="LOGO" max-width="120" max-height="120"></v-img>-->
 
       <!--  Contact text-->
       <div class="text-box">
@@ -124,7 +124,7 @@
       </div>
       <h4 class="text-center1">      
       <img class="mx-auto w-2/3 sm:w-2/3 md:w-1/2 lg:w-2/3" 
-      src="label.png">
+      src="../../public/label.png">
     </h4>
     </div>
   </section>
@@ -177,16 +177,16 @@ export default {
     return {
       items: [
         {
-          src: "pic0.png ",
+          src: "../../public/pic0.png ",
         },
         {
-          src: "pic1.png ",
+          src: "../../public/pic1.png ",
         },
         {
-          src: "pic2.png",
+          src: "../../public/pic2.png",
         },
         {
-          src: "pic3.png",
+          src: "../../public/pic3.png",
         },
       ],
       images: [],
@@ -222,7 +222,7 @@ export default {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("pic0.png");
+url("../../public/pic0.png");
 background-position: center;
 background-size: cover;
 position: relative;
@@ -492,7 +492,7 @@ p {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("pic0.png");
+url("../../public/pic0.png");
 background-position: center;
 background-size: cover;
 position: relative;

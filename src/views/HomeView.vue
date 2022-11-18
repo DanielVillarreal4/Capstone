@@ -114,7 +114,7 @@
       </div>
       <h4 class="text-center1">      
       <img class="mx-auto w-2/3 sm:w-2/3 md:w-1/2 lg:w-2/3" 
-      src="label.png">
+      src="../../public/label.png">
     </h4>
     </div>
   </section>
@@ -154,19 +154,19 @@ export default {
     return {
       items: [
         {
-          src: "pic0.png ",
+          src: "pic0.png "
         },
         {
-          src: "pic1.png ",
+          src: "pic1.png "
         },
         {
-          src: "pic2.png",
+          src: "pic2.png"
         },
         {
-          src: "pic3.png",
+          src: "pic3.png"
         },
         {
-          src: "label.png",
+          src: "label.png"
         },
         {
           src: "CC_4w.png"
@@ -215,8 +215,6 @@ background-position: center;
 background-size: cover;
 position: relative;
 }
-
-
 .header-box{
 min-height: 100vh;
 width: 100%;
@@ -225,11 +223,9 @@ url("pic0.png");
 background-position: center;
 background-size: cover;
 position: absolute;
-opacity: 3;
+opacity: 3; 
 transition: 0.5s ease;
 }
-
-
 
 .header-box:hover{
 min-height: 100vh;
@@ -416,26 +412,6 @@ p {
   text-align: center;
 }
 
-/* for pc and phone useers 
-.LOCATION-box {
-  flex-basis: 30%;
-  border-radius: 1px;
-  margin-bottom: 1%;
-  box-sizing: border-box;
-  transition: 0.5s;
-  overflow: hidden;
-  padding-bottom: 30%;
-  position: relative;
-  height: 0;
-}
-
-.LOCATION-box iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-} */
 
 /* Make effects when the mouse touch the box About us boxs*/
 .boxs:hover {
@@ -446,10 +422,6 @@ p {
   box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }
 
-/* 
-.LOCATION-box:hover {
-  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
-}*/
 
 /* how it appear on phone users*/
 @media( max-width: 768px){
@@ -458,6 +430,7 @@ p {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+
 url("CC_4wq.png");
 background-position: center;
 background-size: cover;
