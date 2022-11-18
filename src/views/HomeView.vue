@@ -22,18 +22,19 @@
     <!-- first section header -->
     
     <section class="header">
-      <img src="CC_Icon.png" alt="LOGO"  height="120">
+
+      <div class="header-box" >
+      <!-- <img src="CC_Icon.png" alt="LOGO"  height="120">-->
 
       <!--  Welcomeing text-->
       <div class="text-box">
+        
         <h1 class="text-center">
           <br />
-          Welcome to C and C Systems
         </h1>
         
-        <p></p>
-        <appointment-button/>
       </div>
+    </div>
     </section>
     <!------------------- About Us -------------------->
     <section class="About"></section>
@@ -140,12 +141,11 @@
   </div>
 </template>
 <script>
-import AppointmentButton from "../components/AppointmentButton.vue";
 
 export default {
   name: "HomeView",
   components: {
-    AppointmentButton,
+    
   },
   data() {
     return {
@@ -178,7 +178,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 .carouselClass {
   align-content: center !important;
   justify-content: center !important;
@@ -209,15 +209,6 @@ position: relative;
 
 
 
-nav img {
-  width: 180px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 
 /* text style*/
@@ -426,18 +417,63 @@ p {
   box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }
 
+.header-box{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: 1s;
+
+}
+
+.header-box:hover{
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+url("CC_4w.png");
+min-height: 100vh;
+width: 100%;
+background-position: center;
+background-size: cover;
+position: relative;
+bottom: 50%;
+}
+
+
+
+
 /* 
 .LOCATION-box:hover {
   box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }*/
 
 /* how it appear on phone users*/
-@media( max-width: 730px){
+@media( max-width: 768px){
 .header {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("pic0.png");
+url("CC_4wq.png");
+background-position: center;
+background-size: cover;
+position: relative;
+}
+
+.header-box{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: 1s;
+
+}
+
+.header-box:hover{
+  display: none;
+  background-image: linear-gradient(rgba(17, 30, 81, 0.7),rgba(17, 30, 81, 0.7)),
+url("CC_4w.png");
+min-height: 100vh;
+width: 100%;
 background-position: center;
 background-size: cover;
 position: relative;
