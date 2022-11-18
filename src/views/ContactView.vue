@@ -153,7 +153,7 @@
         <br />
         Follow us
       </h4>
-      <div class="footer-row"></div>
+      <div class="footer-row"></div> 
 
       <!-- owner media if any-->
       <div class="icons">

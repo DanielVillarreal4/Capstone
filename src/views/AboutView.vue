@@ -188,7 +188,7 @@ position: relative;
       }
 
 */
-      .text {
+      .text { 
         color: #CD5C5C;
         padding-left: 30px 10px;
         flex-basis: 50%;

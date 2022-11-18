@@ -191,7 +191,7 @@ export default {
 .carouselClass {
   align-content: center !important;
   justify-content: center !important;
-}
+} 
 
 .v-application p,
 .v-application h1 {
