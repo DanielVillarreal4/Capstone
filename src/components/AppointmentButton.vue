@@ -28,34 +28,6 @@
                   label="Email Address"
                 ></v-text-field
               ></v-col>
-              <v-col cols="12" sm="6" md="6">
-                <v-text-field
-                  v-model="streetaddress"
-                  type="text"
-                  label="Street Address"
-                ></v-text-field
-              ></v-col>
-              <v-col cols="12" sm="6" md="6">
-                <v-text-field
-                  v-model="city"
-                  type="text"
-                  label="City"
-                ></v-text-field
-              ></v-col>
-              <v-col cols="12" sm="6" md="6">
-                <v-text-field
-                  v-model="state"
-                  type="text"
-                  label="State"
-                ></v-text-field
-              ></v-col>
-              <v-col cols="12" sm="6" md="6">
-                <v-text-field
-                  v-model="zipcode"
-                  type="text"
-                  label="Zip Code"
-                ></v-text-field
-              ></v-col>
               <v-col cols="12" sm="12" md="12">
                 <v-menu
                   v-model="menu1"
@@ -153,6 +125,9 @@
                   rows="2"
                 ></v-textarea
               ></v-col>
+              <v-col cols="12" sm="12" md="12">
+                <v-checkbox v-model="notifCheck" label="Receive Notifications"></v-checkbox>
+              </v-col>
             </v-row>
             <v-btn type="submit" class="mr-4 Click" @click.stop="dialog = false"
               >Create Appointment</v-btn
@@ -183,6 +158,7 @@ export default {
     formattedStartTime: "",
     formattedEndTime: "",
     time: "",
+    notifCheck: false,
 
     date: new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
       .toISOString()
@@ -244,24 +220,17 @@ export default {
   methods: {
     allowedHours: (v) => v >= 9 && v <= 20,
     async addAppointment() {
-      let Address = {
-        City: this.city,
-        State: this.state,
-        StreetAddress: this.streetaddress,
-        ZipCode: this.zipcode,
-      };
       if (this.name && this.starttime && this.endtime && this.date) {
         await db.collection("appointments").add({
           Name: this.name,
           PhoneNumber: this.phonenumber,
-          Description: this.details,
-          Address: Address,
-          Approved: false,
           Email: this.email,
           StartDate: this.date,
-          EndDate: this.date,
           StartTime: this.starttime,
           EndTime: this.endtime,
+          Description: this.details,
+          Notification: this.notifCheck,
+          Approved: false,
         });
         console.log("Submitted Successfully.");
       } else {
@@ -271,10 +240,6 @@ export default {
     cancel() {
       this.name = "";
       this.phonenumber = "";
-      this.city = "";
-      this.state = "";
-      this.streetaddress = "";
-      this.zipcode = "";
       this.email = "";
       this.date = "";
       this.starttime = "";
@@ -282,6 +247,7 @@ export default {
       this.details = "";
       this.formattedStartTime = "";
       this.formattedEndTime = "";
+      this.notifCheck = false;
       this.dialog = false;
     },
     formatDate(date) {

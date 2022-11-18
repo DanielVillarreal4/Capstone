@@ -427,7 +427,7 @@ p {
 
 .header-box:hover{
   background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("CC_4w.png");
+url("../../public/CC_4w.png");
 min-height: 100vh;
 width: 100%;
 background-position: center;
@@ -451,7 +451,7 @@ min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
 
-url("CC_4wq.png");
+url("../../public/CC_4wq.png");
 background-position: center;
 background-size: cover;
 position: relative;
@@ -470,7 +470,7 @@ position: relative;
 .header-box:hover{
   display: none;
   background-image: linear-gradient(rgba(17, 30, 81, 0.7),rgba(17, 30, 81, 0.7)),
-url("CC_4w.png");
+url("../../public/CC_4w.png");
 min-height: 100vh;
 width: 100%;
 background-position: center;
