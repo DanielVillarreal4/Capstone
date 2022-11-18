@@ -23,7 +23,7 @@
     
     <section class="header">
       <div class="header-box" >
-      <!-- <img src="CC_Icon.png" alt="LOGO"  height="120">-->
+
       <!--  Welcomeing text-->
       <div class="text-box">
         
@@ -76,7 +76,7 @@
     </div>
     <!------------------- CONTACT us ------------------>
 
-    <section class="CONTACT"></section>
+    <section class="CONTACT">
     <div class="CONTACT-boxs">
       <h1>Contact Us</h1>
 
@@ -87,32 +87,37 @@
       class="Click1">General business email</a>
     </div>
 
-      <h5>C&C System</h5>
-      <p>
-        C&C Systems is a business built on a strong 
+    <div class="cc"> 
+        <h5>C&C System</h5>
+        <p>
+          C & C Systems is a business built on a strong 
         foundation. This foundation has many layers. 
         First and foremost, we are a Christian-based 
         company and believe God, and he will always be our strength. 
         God will always provide. The next layer of our foundation is made up of family. 
-        Our family is made up of more than flesh and the blood that runs through our veins. 
+        Our family is made up of more than flesh and the blood that runs through our veins.
+        </p>
+        <p> 
         Our family is always constantly growing, and we strive to treat our customers as if they 
         truly were our own flesh and blood. Friends, all I can say is that you can never have too 
         many and we look for friendship wherever we go. With a foundation made up of God, family, 
-        and friends, where can you go wrong with anything you try to accomplish as company.
+        and friends, where can you go wrong with anything you try to accomplish as company.</p>
+        <p> 
  Our company is based on security, and we know this better than most. One of our owners served his 
- country for more than 24 years of his life fighting for all Americans security and freedoms. 
+ country for more than 24 years of his life fighting for all Americans security and freedoms. </p>
+ <p> 
  C&C Systems understand what it takes to take protect what you have and the safety of the loved ones in our lives.
  If you are looking for a company that treats you like family and friends, with more than 33 years of 
  combined experience, then you should look no further. C&C Systems will be there insured you can protect 
  what you have earned and your loved one’s safety.
-      </p>
+        </p>
+      </div>
       <h4 class="text-center1">      
       <img class="mx-auto w-2/3 sm:w-2/3 md:w-1/2 lg:w-2/3" 
       src="../../public/label.png">
     </h4>
     </div>
-   
-
+  </section>
     
     <!--- foooter-->
 
@@ -149,20 +154,26 @@ export default {
     return {
       items: [
         {
-          src: "../../public/pic0.png ",
+          src: "pic0.png "
         },
         {
-          src: "../../public/pic1.png ",
+          src: "pic1.png "
         },
         {
-          src: "../../public/pic2.png",
+          src: "pic2.png"
         },
         {
-          src: "../../public/pic3.png",
+          src: "pic3.png"
         },
         {
-          src: "../../public/label.png",
+          src: "label.png"
         },
+        {
+          src: "CC_4w.png"
+        },
+        {
+          src: "picl.png"
+        }
       ],
       images: [],
       employees: [],
@@ -180,7 +191,7 @@ export default {
 .carouselClass {
   align-content: center !important;
   justify-content: center !important;
-}
+} 
 
 .v-application p,
 .v-application h1 {
@@ -199,14 +210,31 @@ export default {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("../../public/pic0.png");
+url("picl.png");
 background-position: center;
 background-size: cover;
 position: relative;
 }
+.header-box{
+min-height: 100vh;
+width: 100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+url("pic0.png");
+background-position: center;
+background-size: cover;
+position: absolute;
+opacity: 3; 
+transition: 0.5s ease;
+}
 
+.header-box:hover{
+min-height: 100vh;
+width: 100%;
+position: absolute;
+opacity: 3%;
+transition: 1s ease;
 
-
+}
 
 
 /* text style*/
@@ -319,8 +347,8 @@ h1 {
 
 /* small text under the About US text*/
 .boxs p {
-  color: #777;
-  font:  15px "Fira Sans", serif;
+  color: rgb(0, 0, 0);
+  font:  22px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -339,7 +367,6 @@ p {
 /* CONTACT, PHONE, work and location style*/
 .boxs {
   flex-basis: 30%;
-  background: whitesmoke;
   border-radius: 60px;
   margin-bottom: 2%;
   padding: 10px 10px;
@@ -347,9 +374,9 @@ p {
   transition: 0.5s;
 }
 
+
 .CONTACT-boxs {
   flex-basis: 30%;
-  /*background: #f8f2f2;*/
   border-radius: 25px;
   box-sizing: border-box;
   transition: 0.5s;
@@ -377,34 +404,14 @@ p {
 
 /* small text under the About US text*/
 .CONTACT-boxs p {
-  color: #777;
-  font: 15px "Fira Sans", serif;
+  color: rgb(0, 0, 0);
+  font: 22px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
   text-align: center;
 }
 
-/* for pc and phone useers 
-.LOCATION-box {
-  flex-basis: 30%;
-  border-radius: 1px;
-  margin-bottom: 1%;
-  box-sizing: border-box;
-  transition: 0.5s;
-  overflow: hidden;
-  padding-bottom: 30%;
-  position: relative;
-  height: 0;
-}
-
-.LOCATION-box iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-} */
 
 /* Make effects when the mouse touch the box About us boxs*/
 .boxs:hover {
@@ -415,37 +422,10 @@ p {
   box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }
 
-.header-box{
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  transition: 1s;
-
-}
-
-.header-box:hover{
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("CC_4w.png");
-min-height: 100vh;
-width: 100%;
-background-position: center;
-background-size: cover;
-position: relative;
-bottom: 50%;
-}
-
-
-
-
-/* 
-.LOCATION-box:hover {
-  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
-}*/
 
 /* how it appear on phone users*/
 @media( max-width: 768px){
+  
 .header {
 min-height: 100vh;
 width: 100%;
@@ -457,26 +437,30 @@ background-size: cover;
 position: relative;
 }
 
+
 .header-box{
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  transition: 1s;
-
-}
-
-.header-box:hover{
   display: none;
-  background-image: linear-gradient(rgba(17, 30, 81, 0.7),rgba(17, 30, 81, 0.7)),
-url("CC_4w.png");
 min-height: 100vh;
 width: 100%;
 background-position: center;
 background-size: cover;
 position: relative;
 }
+
+
+
+.header-box:hover{
+display: none;
+min-height: 100vh;
+width: 100%;
+background-position: center;
+background-size: cover;
+position: relative;
+
+}
+
+
+
 	.text-box h1{
 		font-size: 40px;
 	}
