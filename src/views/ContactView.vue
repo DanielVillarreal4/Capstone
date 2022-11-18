@@ -97,27 +97,31 @@
 
       </div>
     </div>
+    <div class="cc"> 
       <h5>C&C System</h5>
       <p>
-        C&C Systems is a business built on a strong 
+          C & C Systems is a business built on a strong 
         foundation. This foundation has many layers. 
         First and foremost, we are a Christian-based 
         company and believe God, and he will always be our strength. 
         God will always provide. The next layer of our foundation is made up of family. 
-        Our family is made up of more than flesh and the blood that runs through our veins. 
+        Our family is made up of more than flesh and the blood that runs through our veins.
+        </p>
+        <p> 
         Our family is always constantly growing, and we strive to treat our customers as if they 
         truly were our own flesh and blood. Friends, all I can say is that you can never have too 
         many and we look for friendship wherever we go. With a foundation made up of God, family, 
-        and friends, where can you go wrong with anything you try to accomplish as company.
+        and friends, where can you go wrong with anything you try to accomplish as company.</p>
+        <p> 
  Our company is based on security, and we know this better than most. One of our owners served his 
- country for more than 24 years of his life fighting for all Americans security and freedoms. 
+ country for more than 24 years of his life fighting for all Americans security and freedoms. </p>
+ <p> 
  C&C Systems understand what it takes to take protect what you have and the safety of the loved ones in our lives.
  If you are looking for a company that treats you like family and friends, with more than 33 years of 
  combined experience, then you should look no further. C&C Systems will be there insured you can protect 
  what you have earned and your loved one’s safety.
- 
- 
-      </p>
+        </p>
+      </div>
       <h4 class="text-center1">      
       <img class="mx-auto w-2/3 sm:w-2/3 md:w-1/2 lg:w-2/3" 
       src="label.png">
@@ -320,12 +324,12 @@ h1 {
 }
 
 .row1 {
-  margin: 5%;
+  flex-basis: 10%;
+  margin: 1%;
   display: flex;
   text-align: center;
   justify-content:space-around;
   font: 15px "Fira Sans", serif;
-
 }
 
 
@@ -339,7 +343,7 @@ h1 {
 /* small text under the About US text*/
 .boxs p {
   color: #777;
-  font:  15px "Fira Sans", serif;
+  font:  22px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -352,7 +356,6 @@ h1 {
 /* CONTACT, PHONE, work and location style*/
 .boxs {
   flex-basis: 30%;
-  background: whitesmoke;
   border-radius: 60px;
   margin-bottom: 2%;
   padding: 10px 10px;
@@ -362,8 +365,7 @@ h1 {
 }
 
 .boxs1 {
-  flex-basis: 30%;
-  background: rgb(253, 251, 251);
+  flex-basis: 45%;
   border-radius: 60px;
   margin-bottom: 2%;
   padding: 10px 10px;
@@ -371,9 +373,30 @@ h1 {
   text-align: center;
   transition: 0.5s;
 }
+
+.cc {
+  display: inline;
+  flex-basis: 1%;
+  border-radius: 60px;
+  margin-bottom: 2%;
+  box-sizing: border-box;
+  text-align: center;
+  transition: 0.5s;
+  padding: 22px 0 25px;
+}
+
+.cc p{
+ 
+  flex-basis: 1%;
+  border-radius: 60px;
+  margin-bottom: 2%;
+  box-sizing: border-box;
+  text-align: center;
+  transition: 0.5s;
+  padding: 22px 15px 25px;
+}
 .CONTACT-boxs {
-  flex-basis: 30%;
-  /*background: #f8f2f2;*/
+  flex-basis: 50%;
   border-radius: 25px;
   box-sizing: border-box;
   transition: 0.5s;
@@ -406,7 +429,8 @@ h1 {
   font-weight: 250;
 }
 .CONTACT-boxs p {
-  font: 15px "Fira Sans", serif;
+  color: rgb(0, 0, 0);
+  font: 22px "Fira Sans", serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -448,6 +472,9 @@ p {
   box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }
 
+.boxs1:hover {
+  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
+}
 .CONTACT-boxs:hover {
   box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }

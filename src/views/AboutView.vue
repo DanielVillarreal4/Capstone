@@ -121,6 +121,9 @@ export default {
         {
           src: "pic3.png",
         },
+        {
+          src: "CC_4w.png"
+        }
       ],
       images: [],
       employees: [],
@@ -170,11 +173,11 @@ position: relative;
       img {
         width: 100%;
         border-radius: 60px;
-        max-height:  10cm;
+        max-height:  12cm;
       }
       .image {
-        flex-basis: 50%;
-        order: 2;
+        flex-basis: 40%;
+        order: 3;
       }
 
 /*
@@ -188,26 +191,23 @@ position: relative;
       .text {
         color: #CD5C5C;
         padding-left: 30px 10px;
-        color: #CD5C5C;
-        flex-basis: 30%;
+        flex-basis: 50%;
         background: rgb(255, 253, 253);
         border-radius: 60px;
         margin-bottom: 2%;
         font: italic 10px "Fira Sans", serif;
         box-sizing: border-box;
         transition: 0.5s;
-        font: italic 10px "Fira Sans", serif;
       }
 
   .text:hover {
-  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
+    box-shadow: 0 0 15px 0px rgba(184, 182, 182, 0.2);
 }
 
 .text p{
-  color: #837c7c;
-  padding: 5px 0 2px;
-  font: 20px "Fira Sans", serif;
-  
+  color: #000000;
+  padding: 22px 15px 25px;
+  font: 22px "Fira Sans", serif;
 }
 
 
@@ -343,6 +343,11 @@ position: relative;
 		font-size: 40px;
 	}
 
+  .text p{
+  color: #000000;
+  padding: 5px 0 2px;
+  font: 22px "Fira Sans", serif;
+}
 	nav .fa{
 		display: block;
 		color: red;
