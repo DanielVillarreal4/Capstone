@@ -134,7 +134,7 @@ export default {
 .pa-8{
     display: block; 
     margin-bottom: 5px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     width: 5px;
   }
   .mobile{
@@ -217,11 +217,6 @@ export default {
   padding-right: 30px;
   margin-right: 30px;
 }
- .profileBtn {
-  margin-top: -0.9pc;
-  
-} 
-
 
 .trClass {
   border-color: white;
@@ -264,6 +259,10 @@ export default {
 }
 .v-toolbar__content {
   align-items: center;
+}
+
+.mdi-account-circle::before {
+  margin-top: -20px;
 }
 </style>
 
