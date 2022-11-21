@@ -1,16 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import { authenticationGuard } from '../auth/authGuard';
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   mode: 'history',
   // base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
       name: 'home',
+      meta: {
+        guest: true,
+      },
       // route level code-splitting
       // this generates a separate chunk (home.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -19,6 +24,9 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
+      meta: {
+        guest: true,
+      },
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -27,6 +35,9 @@ export default new Router({
     {
       path: '/contact-us',
       name: 'contact-us',
+      meta: {
+        guest: true,
+      },
       // route level code-splitting
       // this generates a separate chunk (contact-us.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -35,7 +46,9 @@ export default new Router({
     {
       path: '/profile',
       name: 'profile',
-      beforeEnter: authenticationGuard,
+      meta: {
+        auth: true,
+      },
       // route level code-splitting
       // this generates a separate chunk (profile.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -44,6 +57,9 @@ export default new Router({
     {
       path: '/register',
       name: 'register',
+      meta: {
+        guest: true,
+      },
       // route level code-splitting
       // this generates a separate chunk (register.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -52,14 +68,29 @@ export default new Router({
     {
       path: '/login',
       name: 'login',
+      meta: {
+        guest: true,
+      },
       // route level code-splitting
       // this generates a separate chunk (login.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "login" */ '../views/LoginView.vue')
     },
     {
+      path: '/admin',
+      name: 'admin',
+      meta: {
+        auth: true
+      },
+      // route level code-splitting
+      // this generates a separate chunk (login.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "login" */ '../views/AdminView.vue')
+    },
+    {
       path: '/TestingAuth',
       name: 'testingauth',
+
       // route level code-splitting
       // this generates a separate chunk (login.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -68,7 +99,6 @@ export default new Router({
     {
       path: '/TestingAPI',
       name: 'testingapi',
-      beforeEnter: authenticationGuard,
       // route level code-splitting
       // this generates a separate chunk (login.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -76,3 +106,46 @@ export default new Router({
     },
   ]
 })
+
+
+router.beforeEach((to, from, next) => {
+  firebase.auth().onAuthStateChanged(userAuth => {
+    if (userAuth) {
+      firebase.auth().currentUser.getIdTokenResult()
+        .then(function ({
+          claims
+        }) {
+          if (claims.client) {
+            if (to.path === '/admin')
+              return next({
+                path: '/profile',
+              })
+          }
+          else if (claims.admin) {
+            if (to.path === '/admin')
+              return next({
+                path: '/admin',
+              })
+          }
+          else{
+            return next()
+          }
+        })
+    } else {
+      if (to.matched.some(record => record.meta.auth)) {
+        next({
+          path: '/login',
+          query: {
+            redirect: to.fullPath
+          }
+        })
+      } else {
+        next()
+      }
+    }
+
+  })
+  next()
+})
+
+export default router

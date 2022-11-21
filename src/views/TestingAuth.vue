@@ -239,8 +239,6 @@ export default {
     },
     readClients() {
       this.clients = [];
-      // console.log("reading clients");
-      // console.log(this.clientsData);
       db.collection("clients")
         .get()
         .then((querySnapshot) => {
@@ -254,7 +252,6 @@ export default {
               PhoneNumber: doc.data().PhoneNumber,
               Password: doc.data().Password,
             });
-            // console.log(doc.id, " => ", doc.data());
           });
         })
         .catch((error) => {

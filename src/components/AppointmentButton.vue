@@ -5,7 +5,7 @@
       <v-card>
         <v-container>
           <v-card-title>Create Appointment</v-card-title>
-          <v-form @submit.prevent="addAppointment">
+          <v-form @submit.prevent="addAppointment" ref="form">
             <v-row>
               <v-col cols="12" sm="6" md="12">
                 <v-text-field
@@ -14,11 +14,17 @@
                   label="Your Name/Business Name"
                 ></v-text-field
               ></v-col>
-              <v-col cols="12" sm="6" md="6">
+              <v-col cols="12" sm="6" md="6"
+                ><!--v-on:keypress="acceptNumber" -->
                 <v-text-field
                   v-model="phonenumber"
                   type="text"
                   label="Phone Number"
+                  maxlength="11"
+                  counter="11"
+                  hint="1234567891"
+                  persistent-hint
+                  :rules="phoneRules"
                 ></v-text-field
               ></v-col>
               <v-col cols="12" sm="6" md="6">
@@ -26,6 +32,7 @@
                   v-model="email"
                   type="text"
                   label="Email Address"
+                  :rules="emailRules"
                 ></v-text-field
               ></v-col>
               <v-col cols="12" sm="12" md="12">
@@ -78,8 +85,8 @@
                     v-if="menu3"
                     v-model="starttime"
                     :allowed-hours="allowedHours"
-                    min="9:00"
-                    max="20:00"
+                    min="8:00"
+                    max="17:00"
                     full-width
                     @click:minute="$refs.menu.save(time)"
                   ></v-time-picker> </v-menu
@@ -110,8 +117,8 @@
                     v-if="menu2"
                     v-model="endtime"
                     :allowed-hours="allowedHours"
-                    min="9:00"
-                    max="20:00"
+                    min="8:00"
+                    max="17:00"
                     full-width
                     @click:minute="$refs.menu.save(time)"
                   ></v-time-picker>
@@ -123,13 +130,21 @@
                   type="text"
                   label="Details"
                   rows="2"
+                  hint="The services you are wanting."
                 ></v-textarea
               ></v-col>
               <v-col cols="12" sm="12" md="12">
-                <v-checkbox v-model="notifCheck" label="Receive Notifications"></v-checkbox>
+                <v-checkbox
+                  v-model="notifCheck"
+                  label="Receive Notifications"
+                ></v-checkbox>
               </v-col>
             </v-row>
-            <v-btn type="submit" class="mr-4 Click" @click.stop="dialog = false"
+            <v-btn
+              type="submit"
+              class="mr-4 Click"
+              @click="setInput"
+              @click.stop="dialog = false"
               >Create Appointment</v-btn
             >
             <v-btn @click="cancel" class="space">Cancel</v-btn>
@@ -137,28 +152,44 @@
         </v-container>
       </v-card>
     </v-dialog>
+    <v-snackbar v-model="snackbar" :timeout="timeout">
+      {{ snackBarText }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn color="blue" text v-bind="attrs" @click="snackbar = false">
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 <script>
-import firebase from "../firebaseInit.js";
+// import firebase from "../firebaseInit.js";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+import { showSnackbar } from "../globalActions";
+
 const db = firebase.firestore();
 export default {
   data: (vm) => ({
+    snackbar: false,
+    snackBarText: "",
+    timeout: 2000,
     dialog: false,
     name: "",
-    phonenumber: "",
+    phonenumber: "1234567891",
+    phonePlaceholder: "",
     email: "",
-    streetaddress: "",
-    city: "",
-    state: "",
-    zipcode: "",
     details: "",
     starttime: "",
     endtime: "",
     formattedStartTime: "",
     formattedEndTime: "",
     time: "",
+    user: null,
     notifCheck: false,
+    input: {},
 
     date: new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
       .toISOString()
@@ -171,7 +202,94 @@ export default {
     menu1: false,
     menu2: false,
     menu3: false,
+    phoneRules: [
+      (v) => !!v || "Phone Number is required",
+      (v) =>
+        /.{10,}/.test(v) || "Phone Number must contain at least 10 numbers",
+    ],
+    emailRules: [
+      (v) => !!v || "E-mail is required",
+      (v) =>
+        /^(([^<>()[\]\\.,;:\s@']+(\.[^<>()\\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+          v
+        ) || "E-mail must be valid",
+    ],
   }),
+  methods: {
+    allowedHours: (v) => v >= 8 && v <= 17,
+    openSnackbar(message){
+      showSnackbar(message);
+    },
+    setInput() {
+      let name = this.name;
+      let phonenumber = this.phonenumber;
+      let email = this.email;
+      let endtime = this.endtime;
+      let starttime = this.starttime;
+      let date = this.date;
+      let details = this.details;
+      let notifCheck = this.notifCheck;
+      this.input = {
+        name: name,
+        phonenumber: phonenumber,
+        email: email,
+        endtime: endtime,
+        starttime: starttime,
+        date: date,
+        details: details,
+        notifCheck: notifCheck,
+      };
+    },
+    async addAppointment() {
+      if (
+        this.input.name &&
+        this.input.starttime &&
+        this.input.endtime &&
+        this.input.date
+      ) {
+        await db.collection("appointments").add({
+          Name: this.input.name,
+          PhoneNumber: this.input.phonenumber,
+          Email: this.input.email,
+          StartDate: this.input.date,
+          StartTime: this.input.starttime,
+          EndTime: this.input.endtime,
+          Description: this.input.details,
+          Notification: this.input.notifCheck,
+          user_id: this.user.uid,
+          Approved: false,
+        });
+        this.openSnackbar("Your apointment was created successfully.");
+      } else {
+        this.openSnackbar("Name, start, and end date are required")
+      }
+    },
+    cancel() {
+      this.name = "";
+      this.phonenumber = "";
+      this.email = "";
+      this.date = "";
+      this.starttime = "";
+      this.endtime = "";
+      this.details = "";
+      this.formattedStartTime = "";
+      this.formattedEndTime = "";
+      this.notifCheck = false;
+      this.dialog = false;
+    },
+    formatDate(date) {
+      if (!date) return null;
+
+      const [year, month, day] = date.split("-");
+      return `${month}/${day}/${year}`;
+    },
+    parseDate(date) {
+      if (!date) return null;
+
+      const [month, day, year] = date.split("/");
+      return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+    },
+  },
   computed: {
     computedDateFormatted() {
       return this.formatDate(this.date);
@@ -179,6 +297,13 @@ export default {
     dateRangeText() {
       return this.dates.join(" ~ ");
     },
+  },
+
+  created() {
+    var self = this;
+    firebase.auth().onAuthStateChanged(function (user) {
+      self.user = user;
+    });
   },
 
   watch: {
@@ -215,52 +340,8 @@ export default {
         this.formattedEndTime = val + " AM";
       }
     },
-  },
-
-  methods: {
-    allowedHours: (v) => v >= 9 && v <= 20,
-    async addAppointment() {
-      if (this.name && this.starttime && this.endtime && this.date) {
-        await db.collection("appointments").add({
-          Name: this.name,
-          PhoneNumber: this.phonenumber,
-          Email: this.email,
-          StartDate: this.date,
-          StartTime: this.starttime,
-          EndTime: this.endtime,
-          Description: this.details,
-          Notification: this.notifCheck,
-          Approved: false,
-        });
-        console.log("Submitted Successfully.");
-      } else {
-        alert("Name, start and end date are required");
-      }
-    },
-    cancel() {
-      this.name = "";
-      this.phonenumber = "";
-      this.email = "";
-      this.date = "";
-      this.starttime = "";
-      this.endtime = "";
-      this.details = "";
-      this.formattedStartTime = "";
-      this.formattedEndTime = "";
-      this.notifCheck = false;
-      this.dialog = false;
-    },
-    formatDate(date) {
-      if (!date) return null;
-
-      const [year, month, day] = date.split("-");
-      return `${month}/${day}/${year}`;
-    },
-    parseDate(date) {
-      if (!date) return null;
-
-      const [month, day, year] = date.split("/");
-      return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+    dialog(val) {
+      if (!val) this.$refs.form.reset();
     },
   },
 };
@@ -278,8 +359,6 @@ export default {
   background: repeat;
   position: relative;
   cursor: pointer;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("https://cdn.vuetifyjs.com/images/carousel/planet.jpg");
   text-transform: unset;
   font-weight: unset;
 }
@@ -291,5 +370,9 @@ url("https://cdn.vuetifyjs.com/images/carousel/planet.jpg");
 }
 .space {
   float: right;
+}
+
+.v-card__title {
+  font-size: 1.7rem;
 }
 </style>
