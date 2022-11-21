@@ -38,11 +38,10 @@
     <!--- foooter-->
    
     <section class="footer">   
-      <h4 class="text-center1">
-        Follow us
-        <P></P>
+      <h4 class="text-center1">  
       </h4>
-      <div class="footer-row"></div>
+      <img src="../../public/CC_Icon.png" alt="LOGO" width="100" height="100"> 
+
 
       <!-- owner media if any-->
       <div class="icons">
@@ -55,7 +54,7 @@
           <a href = "https://www.instagram.com/" target="_blank" style="color:#azure; text-decoration:none;">
             <i class="fa fa-instagram"></i> </a>
       </div>
-      <p>COPYRIGHT © 2022 - ALL RIGHTS RESERVED.</p>
+      <p> Copyright © 2022 - All Rights Reserved. For Small Businesses LLC </p>
     </section>
 
   </div>
@@ -82,7 +81,7 @@ justify-content: center;
   padding: 15px 40px;
   color: rgb(255, 255, 255);
   position: relative;
-  font: 15px "Fira Sans", serif;
+  font: 15px "Fira Sans", sans-serif;
   font-weight: 250;
   border-radius: 30px;
 }
@@ -90,7 +89,7 @@ justify-content: center;
 .box2 {
   text-align: left;
   color: rgb(255, 255, 255);
-  font: 15px "Fira Sans", serif;
+  font: 15px "Fira Sans", sans-serif;
   font-weight: 250;
   margin-top: 20px;
 }
@@ -98,7 +97,7 @@ justify-content: center;
 .box2 h3 {
   text-align: left;
   color: rgb(255, 255, 255);
-  font: 20px "Fira Sans", serif;
+  font: 20px "Fira Sans", sans-serif;
   font-weight: 250;
   margin-top: 10px;
 }
@@ -112,7 +111,7 @@ justify-content: center;
 
 p {
   color: #777;
-  font: 15px "Fira Sans", serif;
+  font: 15px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -123,7 +122,7 @@ p {
 
 /* follow us*/
 h4 {
-  font:  15px "Fira Sans", serif;
+  font:  15px "Fira Sans", sans-serif;
   text-align: center;
   font-weight: 500;
 }
@@ -149,7 +148,7 @@ justify-content: center;
   padding:30px 50px;
   color: rgb(255, 255, 255);
   position: relative;
-  font: 15px "Fira Sans", serif;
+  font: 15px "Fira Sans", sans-serif;
   font-weight: 250;
   border-radius: 30px;
 }
@@ -157,7 +156,7 @@ justify-content: center;
 .box2 {
   text-align: center;
   color: rgb(255, 255, 255);
-  font: 15px "Fira Sans", serif;
+  font: 15px "Fira Sans", sans-serif;
   font-weight: 250;
   margin-top: 20px;
 }
@@ -165,7 +164,7 @@ justify-content: center;
 .box2 h3 {
   text-align: left;
   color: rgb(255, 255, 255);
-  font: 15px "Fira Sans", serif;
+  font: 15px "Fira Sans", sans-serif;
   font-weight: 250;
   margin-top: 5px;
 }
@@ -181,11 +180,11 @@ justify-content: center;
   width: 100%;
   text-align: center;
   padding: 1px 0;
-  background: #1a1010;
+  background: rgb(40,40,40);
 }
 p {
   color: #777;
-  font: 15px "Fira Sans", serif;
+  font: 15px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -218,7 +217,7 @@ p {
   width: 100%;
   text-align: center;
   padding: 1px 0;
-  background: #1a1010;
+  background:rgb(40,40,40);
 }
 
 .footer h4 {

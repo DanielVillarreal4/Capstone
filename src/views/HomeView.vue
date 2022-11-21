@@ -9,109 +9,101 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
+      
         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+        <link
         rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/font-awesome.min.css"
       />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
-    </head>
 
+      </head>
 
     <!-- first section header -->
-    
     <section class="header">
       <div class="header-box" >
-
-      <!--  Welcomeing text-->
       <div class="text-box">
-        
         <h1 class="text-center">
           <br />
         </h1>
-        
       </div>
     </div>
     </section>
+
     <!------------------- About Us -------------------->
-    <section class="About"></section>
+    <section class="About"> 
     <h1>Services We Offer</h1>
-    <p></p>
+    <p> </p>
+
     <div class="row">
       <div class="boxs">
+        <img src="local-computer-network-icon.png ">
         <h2>Computer Networking</h2>
-        <p>
-          Some quick example text content Some quick example text content Some
-          quick example text content
-        </p>
+        
 
-        <div class="text-box1">
-          <!-- click one -->
-          <a href="about" class="Click1">Learn more</a>
-        </div>
       </div>
-      <div class="boxs">
+      <div class="boxs5">
+        <img src="date-and-time-icon.png">
         <h2>8-5 time on scheduler</h2>
-        <p>
-          Some quick example text content Some quick example text content Some
-          quick example text content
-        </p>
-        <div class="text-box1">
-          <!-- click one -->
-          <a href="about" class="Click1">Learn more</a>
-        </div>
+       
+    </div>
+      <div class="boxs">
+        <img src="thermometer-icon.png">
+        <h2>Thermostats</h2>
+       
+    </div> 
+  </div> 
+
+    <div class="row">
+      <div class="boxs5">
+       
+        <img src="fire-alarm-icon.png">
+        <h2>Fire Alarms</h2>
+       
       </div>
       <div class="boxs">
-        <h2>We are LLC</h2>
-        <p>
-          Some quick example text content Some quick example text content Some
-          quick example text content
-        </p>
-        <div class="text-box1">
-          <!-- click one -->
-          <a href="about" class="Click1">Learn more</a>
-        </div>
-      </div>
+        <img src="garage-icon.png">
+        <h2>Garage Doors</h2>
+        
     </div>
-    <!------------------- CONTACT us ------------------>
 
+      <div class="boxs5">
+        <img src="nature-landscape-icon.png">
+        <h2>Landscape Lighting</h2>
+    </div> 
+  </div> 
+ 
+
+   <div class="row">
+     <div class="boxs">
+      <img src="smart-wireless-door-lock-icon.png">
+       <h2>Security Systems</h2>
+       
+     </div>
+     <div class="boxs5">
+      <img src="cctv-icon.png">
+       <h2>Cameras</h2>
+       
+   </div>
+
+   <div class="boxs9"></div>
+ </div> </section>
+
+    <!------------------- CONTACT us ------------------>
     <section class="CONTACT">
     <div class="CONTACT-boxs">
       <h1>Contact Us</h1>
-
       <div class="text-box1">
+
           <!-- click one -->
-        
       <a href="mailto:Catessystems@gmail.com" target="_blank" style="color:#azure; text-decoration:none;" 
       class="Click1">General business email</a>
     </div>
 
     <div class="cc"> 
-        <h5>C&C System</h5>
-        <p>
-          C & C Systems is a business built on a strong 
-        foundation. This foundation has many layers. 
-        First and foremost, we are a Christian-based 
-        company and believe God, and he will always be our strength. 
-        God will always provide. The next layer of our foundation is made up of family. 
-        Our family is made up of more than flesh and the blood that runs through our veins.
-        </p>
-        <p> 
-        Our family is always constantly growing, and we strive to treat our customers as if they 
-        truly were our own flesh and blood. Friends, all I can say is that you can never have too 
-        many and we look for friendship wherever we go. With a foundation made up of God, family, 
-        and friends, where can you go wrong with anything you try to accomplish as company.</p>
-        <p> 
- Our company is based on security, and we know this better than most. One of our owners served his 
- country for more than 24 years of his life fighting for all Americans security and freedoms. </p>
- <p> 
- C&C Systems understand what it takes to take protect what you have and the safety of the loved ones in our lives.
- If you are looking for a company that treats you like family and friends, with more than 33 years of 
- combined experience, then you should look no further. C&C Systems will be there insured you can protect 
- what you have earned and your loved one’s safety.
-        </p>
       </div>
+      <!-- Label -->
       <h4 class="text-center1">      
       <img class="mx-auto w-2/3 sm:w-2/3 md:w-1/2 lg:w-2/3" 
       src="../../public/label.png">
@@ -119,16 +111,16 @@
     </div>
   </section>
     
-    <!--- foooter-->
-
+    <!--------- footer --------->
     <section class="footer">
       <h4 class="text-center1">
-        <br />
-        Follow us
       </h4>
-      <div class="footer-row"></div>
 
-      <!-- owner media if any-->
+      <!-- logo -->
+      <img src="../../public/CC_Icon.png" alt="LOGO" width="100" height="100"> 
+
+
+      <!-- owner media if any
       <div class="icons">
         <a href = "https://www.facebook.com/" target="_blank" style="color:#azure; text-decoration:none;">
           <i class="fa fa-facebook"></i> </a>
@@ -138,8 +130,8 @@
 
           <a href = "https://www.instagram.com/" target="_blank" style="color:#azure; text-decoration:none;">
             <i class="fa fa-instagram"></i> </a>
-      </div>
-      <p>COPYRIGHT © 2022 - ALL RIGHTS RESERVED.</p>
+      </div>-->
+      <p>Copyright © 2022 - All Rights Reserved. For Small Businesses LLC</p>
     </section>
   </div>
 </template>
@@ -154,19 +146,19 @@ export default {
     return {
       items: [
         {
-          src: "pic0.png "
+          src: "../../public/pic0.png ",
         },
         {
-          src: "pic1.png "
+          src: "../../public/pic1.png ",
         },
         {
-          src: "pic2.png"
+          src: "../../public/pic2.png",
         },
         {
-          src: "pic3.png"
+          src: "../../public/pic3.png",
         },
         {
-          src: "label.png"
+          src: "../../public/label.png",
         },
         {
           src: "CC_4w.png"
@@ -191,7 +183,7 @@ export default {
 .carouselClass {
   align-content: center !important;
   justify-content: center !important;
-} 
+}
 
 .v-application p,
 .v-application h1 {
@@ -200,9 +192,9 @@ export default {
 
 * {
   margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
 
 /* text and background */
@@ -215,6 +207,7 @@ background-position: center;
 background-size: cover;
 position: relative;
 }
+
 .header-box{
 min-height: 100vh;
 width: 100%;
@@ -227,6 +220,7 @@ opacity: 3;
 transition: 0.5s ease;
 }
 
+
 .header-box:hover{
 min-height: 100vh;
 width: 100%;
@@ -235,7 +229,6 @@ opacity: 3%;
 transition: 1s ease;
 
 }
-
 
 /* text style*/
 .text-box {
@@ -257,7 +250,7 @@ transition: 1s ease;
 /* Welcomee text style*/
 .text-box h1 {
   color: #c82020;
-  font: italic 60px "Fira Sans", serif;
+  font: italic 60px "Fira Sans", sans-serif;
   margin-top: 30px;
 }
 
@@ -276,6 +269,7 @@ transition: 1s ease;
   border: 2px solid #535151;
   padding: 15px 30px;
   font-size: 15px;
+  font-weight: bold;
   background: repeat;
   position: relative;
   cursor: pointer;
@@ -284,8 +278,8 @@ transition: 1s ease;
 }
 
 .Click1:hover {
-  border: 2px solid #4524bc;
-  background: #4524bc;
+  border: 2px solid rgb(10,41,84);
+  background: rgb(10,41,84);
   border-radius: 60px;
   transition: 0.1s;
 }
@@ -303,7 +297,6 @@ transition: 1s ease;
   widows: 80%;
   margin: auto;
   padding-top: 30px;
-  
 }
 
 /* CONTACT */
@@ -316,7 +309,7 @@ transition: 1s ease;
 
 /*About text style */
 h1 {
-  font:  40px "Fira Sans", serif;
+  font:  40px "Fira Sans", sans-serif;
   text-align: center;
   font-weight: 500;
 }
@@ -324,7 +317,7 @@ h1 {
 /* small text under the About US text*/
 .About p {
   color: #777;
-  font:  15px "Fira Sans", serif;
+  font:  25px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -333,22 +326,45 @@ h1 {
 
 /* row style*/
 .row {
-  margin: 5%;
+  margin: 2%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around ;
 }
 
 /*about inside the boxes */
 .boxs h2 {
-  font: 30px "Fira Sans", serif;
+  font: 30px "Fira Sans", sans-serif;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
+  
+}
+
+.boxs5 h2 {
+  font: 30px "Fira Sans", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  
+}
+.boxs img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+  width: 80px;  
+}
+
+.boxs5 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+  width: 80px;  
 }
 
 /* small text under the About US text*/
 .boxs p {
   color: rgb(0, 0, 0);
-  font:  22px "Fira Sans", serif;
+  font:  20px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -357,24 +373,35 @@ h1 {
 
 p {
   color: #777;
-  font:  15px "Fira Sans", serif;
+  font:  15px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
   text-align: center;
 }
 
-/* CONTACT, PHONE, work and location style*/
+/* Services We Offer boxes*/
 .boxs {
-  flex-basis: 30%;
-  border-radius: 60px;
-  margin-bottom: 2%;
-  padding: 10px 10px;
-  box-sizing: border-box;
-  transition: 0.5s;
+  background-color: white;
+  margin-bottom: 1%;
+  box-sizing:content-box;
+  transition: 1s;
+  flex-basis: 25%; /* */
 }
 
+.boxs5 {
+  margin-bottom: 1%;
+  box-sizing:content-box;
+  transition: 1s;
+  flex-basis: 25%; /* */
+}
 
+.boxs9{
+  margin-bottom: 2%;
+  box-sizing: border-box;
+  transition: 1s;
+  flex-basis: 30%; /* */
+}
 .CONTACT-boxs {
   flex-basis: 30%;
   border-radius: 25px;
@@ -388,7 +415,7 @@ p {
 }
 
 .text-center1 {
-  font: 15px "Fira Sans", serif;
+  font: 15px "Fira Sans", sans-serif;
   font-weight: bold;
   line-height: 25px;
   padding: 15px;
@@ -397,7 +424,7 @@ p {
 }
 
 .CONTACT-boxs h5 {
-  font: 25px "Fira Sans", serif;
+  font: 25px "Fira Sans", sans-serif;
   text-align: center;
   font-weight: bold;
 }
@@ -405,32 +432,58 @@ p {
 /* small text under the About US text*/
 .CONTACT-boxs p {
   color: rgb(0, 0, 0);
-  font: 22px "Fira Sans", serif;
+  font: 22px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
   text-align: center;
+  
 }
 
+/* for pc and phone useers 
+.LOCATION-box {
+  flex-basis: 30%;
+  border-radius: 1px;
+  margin-bottom: 1%;
+  box-sizing: border-box;
+  transition: 0.5s;
+  overflow: hidden;
+  padding-bottom: 30%;
+  position: relative;
+  height: 0;
+}
+
+.LOCATION-box iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+} */
 
 /* Make effects when the mouse touch the box About us boxs*/
 .boxs:hover {
-  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
+  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2); 
 }
 
+.boxs5:hover {
+  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2); 
+}
 .CONTACT-boxs:hover {
   box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }
 
+/* 
+.LOCATION-box:hover {
+  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
+}*/
 
 /* how it appear on phone users*/
 @media( max-width: 768px){
-  
 .header {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-
 url("CC_4wq.png");
 background-position: center;
 background-size: cover;
@@ -438,15 +491,15 @@ position: relative;
 }
 
 
+
 .header-box{
-  display: none;
+display: none;
 min-height: 100vh;
 width: 100%;
 background-position: center;
 background-size: cover;
 position: relative;
 }
-
 
 
 .header-box:hover{
@@ -459,20 +512,44 @@ position: relative;
 
 }
 
+.boxs p {
+  color: rgb(0, 0, 0);
+  font:  22px "Fira Sans", sans-serif;
+  font-weight: 250;
+  line-height: 25px;
+  padding: 15px;
+  text-align: center;
+}
 
+.About {
+  widows: 80%;
+  margin: auto;
+  padding-top: 30px;
+}
 
-	.text-box h1{
-		font-size: 40px;
-	}
+.boxs {
+  background-color:#f7f7f7;
+  margin-bottom: 10%;
+  transition: 1s;
+  justify-content: space-around;
 
-	nav .fa{
-		display: block;
-		color: red;
-		margin: 10px;
-		font-size: 25px;
-		cursor: pointer;
-	}
-	.row {
+}
+
+  .text-box h1{
+    font-size: 40px;
+  }
+
+  nav .fa{
+    display: block;
+    color: red;
+    margin: 10px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .row {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 5%;
     flex-direction: column;
   }
 
@@ -480,7 +557,7 @@ position: relative;
   width: 100%;
   text-align: center;
   padding: 1px 0;
-  background: #1a1010;
+  background:rgb(40,40,40)
 }
 
 .footer h4 {
@@ -501,7 +578,6 @@ position: relative;
   cursor: pointer;
 }
 
-
 }
 
 /* footer */
@@ -516,7 +592,7 @@ position: relative;
   width: 100%;
   text-align: center;
   padding: 1px 0;
-  background: #1a1010;
+  background: rgb(40,40,40)
 }
 
 .footer h4 {
@@ -537,5 +613,3 @@ position: relative;
   cursor: pointer;
 }
 </style>
-
-
