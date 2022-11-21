@@ -5,7 +5,7 @@
       <title>home</title>
 
       <!-- icons library-->
-      <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
@@ -150,6 +150,7 @@ export default {
         },
         {
           src: "../../public/pic1.png ",
+
         },
         {
           src: "../../public/pic2.png",
@@ -161,10 +162,10 @@ export default {
           src: "../../public/label.png",
         },
         {
-          src: "CC_4w.png"
+          src: "../../public/CC_4w.png"
         },
         {
-          src: "picl.png"
+          src: "../../public/picl.png"
         }
       ],
       images: [],
@@ -202,7 +203,7 @@ export default {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("picl.png");
+url("../../public/picl.png");
 background-position: center;
 background-size: cover;
 position: relative;
@@ -212,7 +213,7 @@ position: relative;
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("pic0.png");
+url("../../public/pic0.png");
 background-position: center;
 background-size: cover;
 position: absolute;
@@ -484,6 +485,7 @@ p {
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+
 url("CC_4wq.png");
 background-position: center;
 background-size: cover;
