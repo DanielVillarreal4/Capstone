@@ -128,13 +128,11 @@
     </section>
 
     <!--- foooter-->
-
-    <section class="footer">
-      <h4 class="text-center1">
-        Follow us
-        <P></P>
+    <section class="footer">   
+      <h4 class="text-center1">  
       </h4>
-      <div class="footer-row"></div>
+      <img src="../../public/CC_Icon.png" alt="LOGO" width="100" height="100"> 
+
 
       <!-- owner media if any-->
       <div class="icons">
@@ -162,7 +160,7 @@
           <i class="fa fa-instagram"></i>
         </a>
       </div>
-      <p>COPYRIGHT © 2022 - ALL RIGHTS RESERVED.</p>
+      <p> Copyright © 2022 - All Rights Reserved. For Small Businesses LLC </p>
     </section>
   </div>
 </template>
@@ -364,7 +362,7 @@ export default {
   padding: 15px 40px;
   color: rgb(255, 255, 255);
   position: relative;
-  font: 15px "Fira Sans", serif;
+  font: 15px "Fira Sans", sans-serif;
   font-weight: 250;
   border-radius: 30px;
 }
@@ -372,7 +370,7 @@ export default {
 .box2 {
   text-align: left;
   color: rgb(255, 255, 255);
-  font: 15px "Fira Sans", serif;
+  font: 15px "Fira Sans", sans-serif;
   font-weight: 250;
   margin-top: 20px;
 }
@@ -380,7 +378,7 @@ export default {
 .box2 h3 {
   text-align: left;
   color: rgb(255, 255, 255);
-  font: 20px "Fira Sans", serif;
+  font: 20px "Fira Sans", sans-serif;
   font-weight: 250;
   margin-top: 10px;
 }
@@ -394,7 +392,7 @@ export default {
 
 p {
   color: #777;
-  font: 15px "Fira Sans", serif;
+  font: 15px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -403,57 +401,57 @@ p {
 
 /* follow us*/
 h4 {
-  font: 15px "Fira Sans", serif;
+  font:  15px "Fira Sans", sans-serif;
   text-align: center;
   font-weight: 500;
 }
 
 /* footer */
 @media (max-width: 700px) {
-  .profile-info {
-    min-height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  .profile-info{
+min-height: 100vh;
+width: 100%;
+background-position: center;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
-  .box {
-    background: #0a2953;
-    text-align: center;
-    background-position: center;
-    background-size: cover;
-    padding: 30px 50px;
-    color: rgb(255, 255, 255);
-    position: relative;
-    font: 15px "Fira Sans", serif;
-    font-weight: 250;
-    border-radius: 30px;
-  }
+.box{
+  background: #0a2953;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  padding:30px 50px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  font: 15px "Fira Sans", sans-serif;
+  font-weight: 250;
+  border-radius: 30px;
+}
 
-  .box2 {
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font: 15px "Fira Sans", serif;
-    font-weight: 250;
-    margin-top: 20px;
-  }
+.box2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font: 15px "Fira Sans", sans-serif;
+  font-weight: 250;
+  margin-top: 20px;
+}
 
-  .box2 h3 {
-    text-align: left;
-    color: rgb(255, 255, 255);
-    font: 15px "Fira Sans", serif;
-    font-weight: 250;
-    margin-top: 5px;
-  }
-  .user-picture {
-    width: 100px;
-    border-radius: 50%;
-    background: #fff;
-    padding: 5px;
-  }
+.box2 h3 {
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font: 15px "Fira Sans", sans-serif;
+  font-weight: 250;
+  margin-top: 5px;
+}
+.user-picture{
+  width: 100px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 5px;
+}
 
   .footer {
     width: 100%;
@@ -493,9 +491,17 @@ h4 {
   width: 100%;
   text-align: center;
   padding: 1px 0;
-  background: #1a1010;
+  background: rgb(40,40,40);
 }
 
+p {
+  color: #777;
+  font: 15px "Fira Sans", sans-serif;
+  font-weight: 250;
+  line-height: 25px;
+  padding: 15px;
+  text-align: center;
+}
 .footer h4 {
   margin-bottom: 5px;
   margin-top: 20px;
@@ -518,6 +524,9 @@ h4 {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  text-align: center;
+  padding: 1px 0;
+  background:rgb(40,40,40);
 }
 
 #clients td,
