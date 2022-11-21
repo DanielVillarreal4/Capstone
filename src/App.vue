@@ -297,6 +297,10 @@ export default {
 .mdi-account-circle::before {
   margin-top: -20px;
 }
+
+body {
+  overflow-x: unset !important;
+}
 </style>
 
 
