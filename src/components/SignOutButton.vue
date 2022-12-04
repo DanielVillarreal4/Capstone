@@ -44,4 +44,40 @@ export default {
 .space {
   float: right;
 }
+@media (max-width: 700px) {
+  .removePCSS {
+    padding: 0px 0px 10px 0px;
+    margin: 0px;
+    color: white;
+    text-align: start;
+  }
+  .row {
+    margin-right: 10%;
+    margin-left: 10%;
+    flex-direction: column;
+  }
+  .Click {
+    display: inline-block;
+    text-decoration-line: none;
+    color: red;
+    border: 2px solid #ffffff;
+    padding: 15px 30px;
+    font-size: 15px;
+    background: repeat;
+    position: relative;
+    cursor: pointer;
+    text-transform: unset;
+    font-weight: unset;
+    margin-bottom: 2%;
+  }
+
+  .Click:hover {
+    border: 2px solid #4524bc;
+    background: #4524bc;
+    transition: 0.1s;
+  }
+  .space {
+    float: right;
+  }
+}
 </style>

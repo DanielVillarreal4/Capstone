@@ -9,116 +9,126 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-      
         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
-        rel="stylesheet"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-        <link
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      />
+      <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/font-awesome.min.css"
       />
-
-      </head>
+    </head>
 
     <!-- first section header -->
     <section class="header">
-      <div class="header-box" >
-      <div class="text-box">
-        <h1 class="text-center">
-          <br />
-        </h1>
+      <div class="header-box">
+        <div class="text-box">
+          <h1 class="text-center">
+            <br />
+          </h1>
+        </div>
       </div>
-    </div>
     </section>
 
     <!------------------- About Us -------------------->
-    <section class="About"> 
-    <h1>Services We Offer</h1>
-    <p> </p>
+    <section class="About">
+      <h1>Services We Offer</h1>
+      <p></p>
 
-    <div class="row">
-      <div class="boxs">
-        <img src="local-computer-network-icon.png ">
-        <h2>Computer Networking</h2>
-        
-
+      <div class="row">
+        <div class="boxs">
+          <img src="local-computer-network-icon.png " />
+          <h2>Computer Networking</h2>
+        </div>
+        <div class="boxs5">
+          <img src="date-and-time-icon.png" />
+          <h2>8-5 time on scheduler</h2>
+        </div>
+        <div class="boxs">
+          <img src="thermometer-icon.png" />
+          <h2>Thermostats</h2>
+        </div>
       </div>
-      <div class="boxs5">
-        <img src="date-and-time-icon.png">
-        <h2>8-5 time on scheduler</h2>
-       
-    </div>
-      <div class="boxs">
-        <img src="thermometer-icon.png">
-        <h2>Thermostats</h2>
-       
-    </div> 
-  </div> 
 
-    <div class="row">
-      <div class="boxs5">
-       
-        <img src="fire-alarm-icon.png">
-        <h2>Fire Alarms</h2>
-       
+      <div class="row">
+        <div class="boxs5">
+          <img src="fire-alarm-icon.png" />
+          <h2>Fire Alarms</h2>
+        </div>
+        <div class="boxs">
+          <img src="garage-icon.png" />
+          <h2>Garage Doors</h2>
+        </div>
+
+        <div class="boxs5">
+          <img src="nature-landscape-icon.png" />
+          <h2>Landscape Lighting</h2>
+        </div>
       </div>
-      <div class="boxs">
-        <img src="garage-icon.png">
-        <h2>Garage Doors</h2>
-        
-    </div>
 
-      <div class="boxs5">
-        <img src="nature-landscape-icon.png">
-        <h2>Landscape Lighting</h2>
-    </div> 
-  </div> 
- 
+      <div class="row">
+        <div class="boxs">
+          <img src="smart-wireless-door-lock-icon.png" />
+          <h2>Security Systems</h2>
+        </div>
+        <div class="boxs5">
+          <img src="cctv-icon.png" />
+          <h2>Cameras</h2>
+        </div>
 
-   <div class="row">
-     <div class="boxs">
-      <img src="smart-wireless-door-lock-icon.png">
-       <h2>Security Systems</h2>
-       
-     </div>
-     <div class="boxs5">
-      <img src="cctv-icon.png">
-       <h2>Cameras</h2>
-       
-   </div>
-
-   <div class="boxs9"></div>
- </div> </section>
+        <div class="boxs9"></div>
+      </div>
+      <div class="row">
+      <a
+        href="/about"
+        style="color: #azure; text-decoration: none"
+        class="Click1 change-width center"
+        >Learn More</a
+      >
+      </div>
+    </section>
 
     <!------------------- CONTACT us ------------------>
     <section class="CONTACT">
-    <div class="CONTACT-boxs">
-      <h1>Contact Us</h1>
-      <div class="text-box1">
-
+      <div class="CONTACT-boxs">
+        <h1>Contact Us</h1>
+        <div class="text-box1">
           <!-- click one -->
-      <a href="mailto:Catessystems@gmail.com" target="_blank" style="color:#azure; text-decoration:none;" 
-      class="Click1">General business email</a>
-    </div>
+          <a
+            href="mailto:Catessystems@gmail.com"
+            target="_blank"
+            style="color: #azure; text-decoration: none"
+            class="Click1"
+            >General business email</a
+          ><br />
+          <a
+            href="/login"
+            style="color: #azure; text-decoration: none"
+            class="Click1 change-width"
+            >Create Appointment</a
+          >
+        </div>
 
-    <div class="cc"> 
+        <div class="cc"></div>
+        <!-- Label -->
+        <h4 class="text-center1">
+          <img
+            class="mx-auto w-2/3 sm:w-2/3 md:w-1/2 lg:w-2/3"
+            src="../../public/label.png"
+          />
+        </h4>
       </div>
-      <!-- Label -->
-      <h4 class="text-center1">      
-      <img class="mx-auto w-2/3 sm:w-2/3 md:w-1/2 lg:w-2/3" 
-      src="../../public/label.png">
-    </h4>
-    </div>
-  </section>
-    
+    </section>
+
     <!--------- footer --------->
     <section class="footer">
-      <h4 class="text-center1">
-      </h4>
+      <h4 class="text-center1"></h4>
 
       <!-- logo -->
-      <img src="../../public/CC_Icon.png" alt="LOGO" width="100" height="100"> 
-
+      <img src="../../public/CC_Icon.png" alt="LOGO" width="100" height="100" />
 
       <!-- owner media if any
       <div class="icons">
@@ -136,12 +146,9 @@
   </div>
 </template>
 <script>
-
 export default {
   name: "HomeView",
-  components: {
-    
-  },
+  components: {},
   data() {
     return {
       items: [
@@ -150,7 +157,6 @@ export default {
         },
         {
           src: "../../public/pic1.png ",
-
         },
         {
           src: "../../public/pic2.png",
@@ -162,11 +168,11 @@ export default {
           src: "../../public/label.png",
         },
         {
-          src: "../../public/CC_4w.png"
+          src: "../../public/CC_4w.png",
         },
         {
-          src: "../../public/picl.png"
-        }
+          src: "../../public/picl.png",
+        },
       ],
       images: [],
       employees: [],
@@ -200,35 +206,33 @@ export default {
 
 /* text and background */
 .header {
-min-height: 100vh;
-width: 100%;
-background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("../../public/picl.png");
-background-position: center;
-background-size: cover;
-position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("../../public/picl.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
-.header-box{
-min-height: 100vh;
-width: 100%;
-background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
-url("../../public/pic0.png");
-background-position: center;
-background-size: cover;
-position: absolute;
-opacity: 3; 
-transition: 0.5s ease;
+.header-box {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("../../public/pic0.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  opacity: 3;
+  transition: 0.5s ease;
 }
 
-
-.header-box:hover{
-min-height: 100vh;
-width: 100%;
-position: absolute;
-opacity: 3%;
-transition: 1s ease;
-
+.header-box:hover {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  opacity: 3%;
+  transition: 1s ease;
 }
 
 /* text style*/
@@ -279,8 +283,8 @@ transition: 1s ease;
 }
 
 .Click1:hover {
-  border: 2px solid rgb(10,41,84);
-  background: rgb(10,41,84);
+  border: 2px solid rgb(10, 41, 84);
+  background: rgb(10, 41, 84);
   border-radius: 60px;
   transition: 0.1s;
 }
@@ -305,12 +309,11 @@ transition: 1s ease;
   widows: 80%;
   margin: auto;
   padding-top: 15px;
-  
 }
 
 /*About text style */
 h1 {
-  font:  40px "Fira Sans", sans-serif;
+  font: 40px "Fira Sans", sans-serif;
   text-align: center;
   font-weight: 500;
 }
@@ -318,7 +321,7 @@ h1 {
 /* small text under the About US text*/
 .About p {
   color: #777;
-  font:  25px "Fira Sans", sans-serif;
+  font: 25px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -329,7 +332,7 @@ h1 {
 .row {
   margin: 2%;
   display: flex;
-  justify-content: space-around ;
+  justify-content: space-around;
 }
 
 /*about inside the boxes */
@@ -337,21 +340,19 @@ h1 {
   font: 30px "Fira Sans", sans-serif;
   text-align: center;
   font-weight: 500;
-  
 }
 
 .boxs5 h2 {
   font: 30px "Fira Sans", sans-serif;
   text-align: center;
   font-weight: 500;
-  
 }
 .boxs img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1%;
-  width: 80px;  
+  width: 80px;
 }
 
 .boxs5 img {
@@ -359,13 +360,13 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1%;
-  width: 80px;  
+  width: 80px;
 }
 
 /* small text under the About US text*/
 .boxs p {
   color: rgb(0, 0, 0);
-  font:  20px "Fira Sans", sans-serif;
+  font: 20px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -374,7 +375,7 @@ h1 {
 
 p {
   color: #777;
-  font:  15px "Fira Sans", sans-serif;
+  font: 15px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -385,19 +386,19 @@ p {
 .boxs {
   background-color: white;
   margin-bottom: 1%;
-  box-sizing:content-box;
+  box-sizing: content-box;
   transition: 1s;
   flex-basis: 25%; /* */
 }
 
 .boxs5 {
   margin-bottom: 1%;
-  box-sizing:content-box;
+  box-sizing: content-box;
   transition: 1s;
   flex-basis: 25%; /* */
 }
 
-.boxs9{
+.boxs9 {
   margin-bottom: 2%;
   box-sizing: border-box;
   transition: 1s;
@@ -438,7 +439,6 @@ p {
   line-height: 25px;
   padding: 15px;
   text-align: center;
-  
 }
 
 /* for pc and phone useers 
@@ -464,11 +464,11 @@ p {
 
 /* Make effects when the mouse touch the box About us boxs*/
 .boxs:hover {
-  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2); 
+  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }
 
 .boxs5:hover {
-  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2); 
+  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }
 .CONTACT-boxs:hover {
   box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
@@ -480,68 +480,66 @@ p {
 }*/
 
 /* how it appear on phone users*/
-@media( max-width: 768px){
-.header {
-min-height: 100vh;
-width: 100%;
-background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+@media (max-width: 768px) {
+  .header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+      url("../../public/CC_4wq.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
 
-url("../../public/CC_4wq.png");
-background-position: center;
-background-size: cover;
-position: relative;
-}
+  .change-width {
+    min-width: 221px;
+  }
 
+  .header-box {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
 
+  .header-box:hover {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
 
-.header-box{
-display: none;
-min-height: 100vh;
-width: 100%;
-background-position: center;
-background-size: cover;
-position: relative;
-}
+  .boxs p {
+    color: rgb(0, 0, 0);
+    font: 22px "Fira Sans", sans-serif;
+    font-weight: 250;
+    line-height: 25px;
+    padding: 15px;
+    text-align: center;
+  }
 
+  .About {
+    widows: 80%;
+    margin: auto;
+    padding-top: 30px;
+  }
 
-.header-box:hover{
-display: none;
-min-height: 100vh;
-width: 100%;
-background-position: center;
-background-size: cover;
-position: relative;
+  .boxs {
+    background-color: #f7f7f7;
+    margin-bottom: 10%;
+    transition: 1s;
+    justify-content: space-around;
+  }
 
-}
-
-.boxs p {
-  color: rgb(0, 0, 0);
-  font:  22px "Fira Sans", sans-serif;
-  font-weight: 250;
-  line-height: 25px;
-  padding: 15px;
-  text-align: center;
-}
-
-.About {
-  widows: 80%;
-  margin: auto;
-  padding-top: 30px;
-}
-
-.boxs {
-  background-color:#f7f7f7;
-  margin-bottom: 10%;
-  transition: 1s;
-  justify-content: space-around;
-
-}
-
-  .text-box h1{
+  .text-box h1 {
     font-size: 40px;
   }
 
-  nav .fa{
+  nav .fa {
     display: block;
     color: red;
     margin: 10px;
@@ -556,30 +554,29 @@ position: relative;
   }
 
   .footer {
-  width: 100%;
-  text-align: center;
-  padding: 1px 0;
-  background:rgb(40,40,40)
-}
+    width: 100%;
+    text-align: center;
+    padding: 1px 0;
+    background: rgb(40, 40, 40);
+  }
 
-.footer h4 {
-  margin-bottom: 5px;
-  margin-top: 20px;
-  font-weight: 600;
-  color: azure;
-}
+  .footer h4 {
+    margin-bottom: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: azure;
+  }
 
-.footer p {
-  color: azure;
-}
+  .footer p {
+    color: azure;
+  }
 
-/* icons size and style*/
-.icons .fa {
-  color: red;
-  margin: 0 13px;
-  cursor: pointer;
-}
-
+  /* icons size and style*/
+  .icons .fa {
+    color: red;
+    margin: 0 13px;
+    cursor: pointer;
+  }
 }
 
 /* footer */
@@ -594,7 +591,7 @@ position: relative;
   width: 100%;
   text-align: center;
   padding: 1px 0;
-  background: rgb(40,40,40)
+  background: rgb(40, 40, 40);
 }
 
 .footer h4 {
@@ -613,5 +610,11 @@ position: relative;
   color: red;
   margin: 0 13px;
   cursor: pointer;
+}
+.change-width {
+  min-width: 221px;
+}
+.center{
+  text-align: center;
 }
 </style>

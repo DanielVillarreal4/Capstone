@@ -69,7 +69,7 @@
           </v-list-item>
 
           <v-list-item v-else>
-            <v-btn class="Click mr-4" width="100%" href="/login">Login</v-btn>
+            <v-btn class="Click mr-4 padding" width="100%" href="/login">Login</v-btn>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -174,6 +174,9 @@ export default {
   .mobile {
     position: relative;
     display: inline-block;
+  }
+  .v-list-item {
+    padding: 0px;
   }
 
   .phone {
@@ -300,6 +303,9 @@ export default {
 
 body {
   overflow-x: unset !important;
+}
+.padding{
+  padding: 7px 16px !important;
 }
 </style>
 

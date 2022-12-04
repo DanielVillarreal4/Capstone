@@ -34,7 +34,7 @@
     <!-- first section header -->
 
     <div class="cc"> 
-        <h5>About C & C System</h5>
+        <h5>About C & C Systems</h5>
       </div>
 
       <!-- Label -->

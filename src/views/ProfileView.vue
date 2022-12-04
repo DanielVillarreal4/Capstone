@@ -23,9 +23,9 @@
         <div class="box2">
           <h3 v-if="user">Email: {{ user.email }}</h3>
           <v-row>
-            <appointment-button />
+            <appointment-button class="fix"/>
             <v-btn @click="getUserAppointments" class="Click"
-              >View Appointments</v-btn
+              >Appointments</v-btn
             >
             <sign-out-button class="ml-3" />
           </v-row>
@@ -128,11 +128,9 @@
     </section>
 
     <!--- foooter-->
-    <section class="footer">   
-      <h4 class="text-center1">  
-      </h4>
-      <img src="../../public/CC_Icon.png" alt="LOGO" width="100" height="100"> 
-
+    <section class="footer">
+      <h4 class="text-center1"></h4>
+      <img src="../../public/CC_Icon.png" alt="LOGO" width="100" height="100" />
 
       <!-- owner media if any-->
       <div class="icons">
@@ -141,7 +139,6 @@
           target="_blank"
           style="color: #azure; text-decoration: none"
         >
-          <i class="fa fa-facebook"></i>
         </a>
 
         <a
@@ -149,7 +146,6 @@
           target="_blank"
           style="color: #azure; text-decoration: none"
         >
-          <i class="fa fa-twitter"></i>
         </a>
 
         <a
@@ -157,10 +153,9 @@
           target="_blank"
           style="color: #azure; text-decoration: none"
         >
-          <i class="fa fa-instagram"></i>
         </a>
       </div>
-      <p> Copyright © 2022 - All Rights Reserved. For Small Businesses LLC </p>
+      <p>Copyright © 2022 - All Rights Reserved. For Small Businesses LLC</p>
     </section>
   </div>
 </template>
@@ -331,8 +326,7 @@ export default {
             id: doc.id,
           });
         });
-      }
-      else this.openSnackbar("You have no appointments under your email.");
+      } else this.openSnackbar("You have no appointments under your email.");
     },
   },
   mounted() {
@@ -401,57 +395,104 @@ p {
 
 /* follow us*/
 h4 {
-  font:  15px "Fira Sans", sans-serif;
+  font: 15px "Fira Sans", sans-serif;
   text-align: center;
   font-weight: 500;
 }
 
 /* footer */
 @media (max-width: 700px) {
-  .profile-info{
-min-height: 100vh;
-width: 100%;
-background-position: center;
-background-size: cover;
-display: flex;
-align-items: center;
-justify-content: center;
-}
+  .fix{
+    width: 100%;
+  }
+  .v-application .ml-3 {
+    margin-left: 0px !important;
+  }
+  .v-application .mr-4{
+    margin-right: 0px !important;
+  }
+  .removePCSS {
+    padding: 0px 0px 10px 0px;
+    margin: 0px;
+    color: white;
+    text-align: start;
+  }
+  .row {
+    margin-right: 10%;
+    margin-left: 10%;
+    flex-direction: column;
+  }
+  .Click {
+    display: inline-block;
+    text-decoration-line: none;
+    color: red;
+    border: 2px solid #ffffff;
+    padding: 15px 30px;
+    font-size: 15px;
+    background: repeat;
+    position: relative;
+    cursor: pointer;
+    text-transform: unset;
+    font-weight: unset;
+    margin-bottom: 2%;
+  }
 
-.box{
-  background: #0a2953;
-  text-align: center;
-  background-position: center;
-  background-size: cover;
-  padding:30px 50px;
-  color: rgb(255, 255, 255);
-  position: relative;
-  font: 15px "Fira Sans", sans-serif;
-  font-weight: 250;
-  border-radius: 30px;
-}
+  .Click:hover {
+    border: 2px solid rgb(10,41,84);
+    background: rgb(10,41,84);
+    transition: 0.1s;
+  }
+  .space {
+    float: right;
+  }
+  .error {
+    color: red !important;
+    background-color: grey !important;
+  }
+  .profile-info {
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.box2 {
-  text-align: center;
-  color: rgb(255, 255, 255);
-  font: 15px "Fira Sans", sans-serif;
-  font-weight: 250;
-  margin-top: 20px;
-}
+  .box {
+    background: #0a2953;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    padding: 30px 50px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    font: 15px "Fira Sans", sans-serif;
+    font-weight: 250;
+    border-radius: 30px;
+  }
 
-.box2 h3 {
-  text-align: left;
-  color: rgb(255, 255, 255);
-  font: 15px "Fira Sans", sans-serif;
-  font-weight: 250;
-  margin-top: 5px;
-}
-.user-picture{
-  width: 100px;
-  border-radius: 50%;
-  background: #fff;
-  padding: 5px;
-}
+  .box2 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font: 15px "Fira Sans", sans-serif;
+    font-weight: 250;
+    margin-top: 20px;
+  }
+
+  .box2 h3 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font: 15px "Fira Sans", sans-serif;
+    font-weight: 250;
+    margin-top: 5px;
+  }
+  .user-picture {
+    width: 100px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 5px;
+  }
 
   .footer {
     width: 100%;
@@ -491,7 +532,7 @@ justify-content: center;
   width: 100%;
   text-align: center;
   padding: 1px 0;
-  background: rgb(40,40,40);
+  background: rgb(40, 40, 40);
 }
 
 p {
@@ -526,7 +567,7 @@ p {
   width: 100%;
   text-align: center;
   padding: 1px 0;
-  background:rgb(40,40,40);
+  background: rgba(213, 204, 204, 0.9);
 }
 
 #clients td,
@@ -536,7 +577,7 @@ p {
 }
 
 #clients tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: rgba(213, 204, 204, 0.9);
 }
 
 #clients tr:hover {
@@ -575,22 +616,23 @@ td .delete {
   margin: 0;
 }
 .Click {
-  display: inline-block;
-  text-decoration-line: none;
-  color: red;
-  border: 2px solid #ffffff;
-  padding: 15px 30px;
-  font-size: 15px;
-  background: repeat;
-  position: relative;
-  cursor: pointer;
-  text-transform: unset;
-  font-weight: unset;
-}
+    display: inline-block;
+    text-decoration-line: none;
+    color: red;
+    border: 2px solid #ffffff;
+    padding: 15px 30px;
+    font-size: 15px;
+    background: repeat;
+    position: relative;
+    cursor: pointer;
+    text-transform: unset;
+    font-weight: bold;
+    margin-bottom: 2%;
+  }
 
 .Click:hover {
-  border: 2px solid #4524bc;
-  background: #4524bc;
+  border: 2px solid rgb(10,41,84);
+  background: rgb(10,41,84);
   transition: 0.1s;
 }
 .space {
@@ -600,4 +642,8 @@ td .delete {
   color: red !important;
   background-color: grey !important;
 }
+/* .v-application .secondary{
+  background-color: white;
+  border-color: white;
+} */
 </style>

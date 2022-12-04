@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="changingWidth">
     <v-btn class="Click mr-4" @click="dialog = true">Create Appointment</v-btn>
     <v-dialog v-model="dialog" max-width="600">
       <v-card>
@@ -217,7 +217,7 @@ export default {
   }),
   methods: {
     allowedHours: (v) => v >= 8 && v <= 17,
-    openSnackbar(message){
+    openSnackbar(message) {
       showSnackbar(message);
     },
     setInput() {
@@ -261,7 +261,7 @@ export default {
         });
         this.openSnackbar("Your apointment was created successfully.");
       } else {
-        this.openSnackbar("Name, start, and end date are required")
+        this.openSnackbar("Name, start, and end date are required");
       }
     },
     cancel() {
@@ -360,7 +360,7 @@ export default {
   position: relative;
   cursor: pointer;
   text-transform: unset;
-  font-weight: unset;
+  font-weight: bold;
 }
 
 .Click:hover {
@@ -371,8 +371,49 @@ export default {
 .space {
   float: right;
 }
+@media (max-width: 700px) {
+  .v-application .mr-4{
+    margin-right: 0px !important;
+  }
+  .v-btn:not(.v-btn--round).v-size--default {
+    min-width: 243px;
+  }
+  /* .changingWidth{
+    width: 280px !important;
+  } */
+  .removePCSS {
+    padding: 0px 0px 10px 0px;
+    margin: 0px;
+    color: white;
+    text-align: start;
+  }
+  .row {
+    margin-right: 10%;
+    margin-left: 10%;
+    flex-direction: column;
+  }
+  .Click {
+    display: inline-block;
+    text-decoration-line: none;
+    color: red;
+    border: 2px solid #ffffff;
+    padding: 15px 30px;
+    font-size: 15px;
+    background: repeat;
+    position: relative;
+    cursor: pointer;
+    text-transform: unset;
+    font-weight: bold;
+    margin-bottom: 2%;
+  }
 
-.v-card__title {
-  font-size: 1.7rem;
+  .Click:hover {
+    border: 2px solid #4524bc;
+    background: #4524bc;
+    transition: 0.1s;
+  }
+  .space {
+    float: right;
+  }
 }
 </style>
