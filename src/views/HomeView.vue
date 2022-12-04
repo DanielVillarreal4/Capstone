@@ -1,291 +1,197 @@
 <template>
   <div>
-    <div>
-      <!-- first section header -->
-      <section class="header">
-        <nav>
-          <!-- LOGO -->
-          <v-img src="public\CC_Icon.png" alt="LOGO" height="120"></v-img>
+    <head>
+      <!-- Page title -->
+      <title>home</title>
 
-          <!-- menu class-->
-          <div class="menu-text" id="menu">
-            <!-- icon open menu for phone -->
-            <i class="fa fa-remove" onClick="CloseMenu()"></i>
-          </div>
+      <!-- icons library-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/font-awesome.min.css"
+      />
+    </head>
 
-          <!-- icon close menu for phons -->
-          <i class="fa fa-reorder" onClick="OpenMenu()"></i>
-        </nav>
-
-        <!--  Welcomeing text-->
+    <!-- first section header -->
+    <section class="header">
+      <div class="header-box">
         <div class="text-box">
           <h1 class="text-center">
             <br />
-            Welcome to C and C Systems
           </h1>
-          <p>Some quick example text content.</p>
-
-          <!-- click one -->
-          <a href="" class="Click">Click Here</a>
         </div>
-      </section>
-      <!------------------- About Us -------------------->
-      <section class="About"></section>
-      <h1>About Us</h1>
-      <p>Learn more</p>
+      </div>
+    </section>
+
+    <!------------------- About Us -------------------->
+    <section class="About">
+      <h1>Services We Offer</h1>
+      <p></p>
 
       <div class="row">
         <div class="boxs">
-          <h2>About us</h2>
-          <p>
-            Some quick example text content Some quick example text content Some
-            quick example text content
-          </p>
+          <img src="local-computer-network-icon.png " />
+          <h2>Computer Networking</h2>
+        </div>
+        <div class="boxs5">
+          <img src="date-and-time-icon.png" />
+          <h2>8-5 time on scheduler</h2>
         </div>
         <div class="boxs">
-          <h2>About us</h2>
-          <p>
-            Some quick example text content Some quick example text content Some
-            quick example text content
-          </p>
-        </div>
-        <div class="boxs">
-          <h2>About us</h2>
-          <p>
-            Some quick example text content Some quick example text content Some
-            quick example text content
-          </p>
+          <img src="thermometer-icon.png" />
+          <h2>Thermostats</h2>
         </div>
       </div>
 
-      <!------------------- CONTACT us ------------------>
+      <div class="row">
+        <div class="boxs5">
+          <img src="fire-alarm-icon.png" />
+          <h2>Fire Alarms</h2>
+        </div>
+        <div class="boxs">
+          <img src="garage-icon.png" />
+          <h2>Garage Doors</h2>
+        </div>
 
-      <section class="CONTACT"></section>
+        <div class="boxs5">
+          <img src="nature-landscape-icon.png" />
+          <h2>Landscape Lighting</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="boxs">
+          <img src="smart-wireless-door-lock-icon.png" />
+          <h2>Security Systems</h2>
+        </div>
+        <div class="boxs5">
+          <img src="cctv-icon.png" />
+          <h2>Cameras</h2>
+        </div>
+
+        <div class="boxs9"></div>
+      </div>
+      <div class="row">
+      <a
+        href="/about"
+        style="color: #azure; text-decoration: none"
+        class="Click1 change-width center"
+        >Learn More</a
+      >
+      </div>
+    </section>
+
+    <!------------------- CONTACT us ------------------>
+    <section class="CONTACT">
       <div class="CONTACT-boxs">
         <h1>Contact Us</h1>
-        <p>
-          Some quick example text content Some quick example text content Some
-          quick example text content
-        </p>
-        <h5>C&C System</h5>
-        <p>
-          Some quick example text content Some quick example text content Some
-          quick example text content
-        </p>
-      </div>
+        <div class="text-box1">
+          <!-- click one -->
+          <a
+            href="mailto:Catessystems@gmail.com"
+            target="_blank"
+            style="color: #azure; text-decoration: none"
+            class="Click1"
+            >General business email</a
+          ><br />
+          <a
+            href="/login"
+            style="color: #azure; text-decoration: none"
+            class="Click1 change-width"
+            >Create Appointment</a
+          >
+        </div>
 
-      <div class="LOCATION-box">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26051.924996458845!2d-93.1536566604492!3d35.293788800000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cc5308668a24f7%3A0xadcf40b5dc41909!2sArkansas%20Tech%20University!5e0!3m2!1sen!2sus!4v1664352396628!5m2!1sen!2sus"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-
-      <!--- foooter-->
-
-      <section class="footer">
+        <div class="cc"></div>
+        <!-- Label -->
         <h4 class="text-center1">
-          <br />
-          About Us
+          <img
+            class="mx-auto w-2/3 sm:w-2/3 md:w-1/2 lg:w-2/3"
+            src="../../public/label.png"
+          />
         </h4>
-        <p>Some quick example text content.</p>
-        <div class="footer-row"></div>
+      </div>
+    </section>
 
-        <!-- owner media if any-->
-        <dic class="icons">
-          <i class="fa fa-facebook"></i>
-          <i class="fa fa-twitter"></i>
-          <i class="fa fa-instagram"></i>
-        </dic>
-        <p>COPYRIGHT © 2022 - ALL RIGHTS RESERVED.</p>
-      </section>
+    <!--------- footer --------->
+    <section class="footer">
+      <h4 class="text-center1"></h4>
 
-      <!-- function for open and close menu for phone users-->
-    </div>
+      <!-- logo -->
+      <img src="../../public/CC_Icon.png" alt="LOGO" width="100" height="100" />
+
+      <!-- owner media if any
+      <div class="icons">
+        <a href = "https://www.facebook.com/" target="_blank" style="color:#azure; text-decoration:none;">
+          <i class="fa fa-facebook"></i> </a>
+        
+          <a href = "https://www.twitter.com/" target="_blank" style="color:#azure; text-decoration:none;">
+            <i class="fa fa-twitter"></i> </a>
+
+          <a href = "https://www.instagram.com/" target="_blank" style="color:#azure; text-decoration:none;">
+            <i class="fa fa-instagram"></i> </a>
+      </div>-->
+      <p>Copyright © 2022 - All Rights Reserved. For Small Businesses LLC</p>
+    </section>
   </div>
 </template>
-
 <script>
-import firebase from "../firebaseInit.js";
-import { collection, addDoc } from "firebase/firestore";
-const db = firebase.firestore();
-const dbRef = collection(db, "clients");
-
 export default {
-  // name: "HelloWorld",
-
-  data: () => ({
-    dialog: false,
-    dialogDelete: false,
-    name: "",
-    firstName: "",
-    lastName: "",
-    middleName: "",
-    email: "",
-    phonenumber: "",
-    password: "",
-    clients: [],
-    clientInput: {},
-    clientsData: {},
-    headers: [
-      {
-        text: "First Name",
-        align: "start",
-        value: "FName",
-      },
-      {
-        text: "Middle Name",
-        align: "start",
-        value: "MName",
-      },
-      {
-        text: "Last Name",
-        align: "start",
-        value: "LName",
-      },
-      {
-        text: "Email",
-        align: "start",
-        value: "Email",
-      },
-      {
-        text: "Phone Number",
-        align: "start",
-        value: "PhoneNumber",
-      },
-      {
-        text: "Password",
-        align: "start",
-        value: "Password",
-      },
-    ],
-  }),
-  methods: {
-    getInput() {
-      this.clientInput = {
-        FName: this.firstName,
-        MName: this.middleName,
-        LName: this.lastName,
-        Email: this.email,
-        PhoneNumber: this.phonenumber,
-        Password: this.password,
-      };
-      this.resetDialog();
-    },
-
-    resetDialog() {
-      this.firstName = "";
-      this.middleName = "";
-      this.lastName = "";
-      this.email = "";
-      this.phonenumber = "";
-      this.password = "";
-      this.dialog = false;
-    },
-
-    createClient() {
-      this.getInput();
-      addDoc(dbRef, this.clientInput)
-        .then(() => {
-          console.log("Document successfully written!");
-        })
-        .catch((error) => {
-          console.error("Error writing document: ", error);
-        });
-    },
-    readClients() {
-      this.clients = [];
-      console.log("reading clients");
-      console.log(this.clientsData);
-      db.collection("clients")
-        .get()
-        .then((querySnapshot) => {
-          querySnapshot.forEach((doc) => {
-            this.clients.push({
-              id: doc.id,
-              FName: doc.data().FName,
-              MName: doc.data().MName,
-              LName: doc.data().LName,
-              Email: doc.data().Email,
-              PhoneNumber: doc.data().PhoneNumber,
-              Password: doc.data().Password,
-            });
-            console.log(doc.id, " => ", doc.data());
-          });
-        })
-        .catch((error) => {
-          console.log("Error getting documents: ", error);
-        });
-    },
-    updateClients() {
-      db.collection("clients")
-        .doc("w5R0nm60zyzlO0SBti80")
-        .update({
-          FName: "test",
-          LName: "test",
-        })
-        .then(() => {
-          console.log("Document successfully updated!");
-        })
-        .catch((error) => {
-          console.error("Error updating document: ", error);
-        });
-    },
-    deleteEmployee() {
-      db.collection("clients")
-        .doc("w5R0nm60zyzlO0SBti80")
-        .delete()
-        .then(() => {
-          console.log("Document successfully deleted!");
-        })
-        .catch((error) => {
-          console.error("Error removing document: ", error);
-        });
-    },
-    /*Vuefire CRUD */
-    // createEmployee(name) {
-    //   this.$firestoreRefs.cities.add({
-    //     name: name,
-    //     date: new Date().toISOString().slice(0, 10),
-    //   });
-    // },
-    // updateEmployee(employee) {
-    //   const employee = { id: id, name: name, date: date };
-    //   this.$firestoreRefs.employee.update({ name: employee.name }).then(() => {
-    //     console.log("Employee updated!");
-    //   });
-    // },
-    // deleteEmployee(id) {
-    //   const employee = { id: id, name: name, date: date };
-    //   this.$firestoreRefs.employee.doc(employee.id).delete();
-    // },
+  name: "HomeView",
+  components: {},
+  data() {
+    return {
+      items: [
+        {
+          src: "../../public/pic0.png ",
+        },
+        {
+          src: "../../public/pic1.png ",
+        },
+        {
+          src: "../../public/pic2.png",
+        },
+        {
+          src: "../../public/pic3.png",
+        },
+        {
+          src: "../../public/label.png",
+        },
+        {
+          src: "../../public/CC_4w.png",
+        },
+        {
+          src: "../../public/picl.png",
+        },
+      ],
+      images: [],
+      employees: [],
+      clients: [],
+      services: [],
+      appointments: [],
+    };
   },
-
-  firestore: {
-    clientsData: db.collection("clients"),
-  },
-  mounted() {
-    this.readClients();
-  },
+  methods: {},
+  mounted: function () {},
 };
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 .carouselClass {
-  /* max-width: 50%; */
   align-content: center !important;
   justify-content: center !important;
 }
-/* .h1Class {
-  text-align: start;
-  align-self: auto;
-  justify-self: auto;
-} */
+
 .v-application p,
 .v-application h1 {
   text-align: center;
@@ -294,62 +200,39 @@ export default {
 * {
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  border: 0;
+  vertical-align: baseline;
 }
 
 /* text and background */
 .header {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7));
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("../../public/picl.png");
   background-position: center;
   background-size: cover;
   position: relative;
 }
 
-/* logo size*/
-nav img {
-  width: 180px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* menu style */
-.menu-text {
-  flex: 1;
-  text-align: right;
-}
-
-.menu-text ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 8px 12px;
-  position: relative;
-}
-
-.menu-text ul li a {
-  color: whitesmoke;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-/* some underline for menu texts */
-.menu-text ul li::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #002de7;
-  display: block;
-  margin: auto;
-  transition: 0.1s;
-}
-
-.menu-text ul li:hover::after {
+.header-box {
+  min-height: 100vh;
   width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("../../public/pic0.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  opacity: 3;
+  transition: 0.5s ease;
+}
+
+.header-box:hover {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  opacity: 3%;
+  transition: 1s ease;
 }
 
 /* text style*/
@@ -361,10 +244,19 @@ nav {
   transform: translate(-50%, -50);
 }
 
+.text-box1 {
+  widows: 10%;
+  margin: auto;
+  text-align: center;
+  padding-top: 1px;
+  transform: translate(-50%, -50);
+}
+
 /* Welcomee text style*/
 .text-box h1 {
-  color: #ff0021;
-  font-size: 60px;
+  color: #c82020;
+  font: italic 60px "Fira Sans", sans-serif;
+  margin-top: 30px;
 }
 
 /* under the Welcomee text style*/
@@ -374,66 +266,35 @@ nav {
   color: aliceblue;
 }
 
-/* click here style */
-.Click {
+/* click inside about box */
+.Click1 {
   display: inline-block;
   text-decoration-line: none;
   color: red;
-  border: 2px solid #ffffff;
+  border: 2px solid #535151;
   padding: 15px 30px;
   font-size: 15px;
+  font-weight: bold;
   background: repeat;
   position: relative;
   cursor: pointer;
+  border-radius: 60px;
   margin-bottom: 25px;
 }
 
-.Click:hover {
-  border: 2px solid #5d76dd;
-  background: #5d76dd;
+.Click1:hover {
+  border: 2px solid rgb(10, 41, 84);
+  background: rgb(10, 41, 84);
+  border-radius: 60px;
   transition: 0.1s;
 }
-
-/* block the open/close icons for pc users*/
-nav .fa {
-  display: none;
+.text-box1 {
+  widows: 10%;
+  margin: auto;
+  text-align: center;
+  padding-top: 1px;
+  transform: translate(-50%, -50);
 }
-
-/* menu for phone users*/
-@media (max-width: 700px) {
-  .text-box h1 {
-    font-size: 30px;
-  }
-
-  .menu-text ul li {
-    display: block;
-  }
-
-  .menu-text {
-    position: absolute;
-    background: #002de7;
-    height: 100vh;
-    width: 200px;
-    top: 0;
-    right: -200px;
-    text-align: left;
-    z-index: 2;
-    transition: 0.1s;
-  }
-
-  nav .fa {
-    display: block;
-    color: red;
-    margin: 10px;
-    font-size: 25px;
-    cursor: pointer;
-  }
-
-  .menu-text ul {
-    padding: 30px;
-  }
-}
-
 /* -------About----------*/
 
 /*About text*/
@@ -452,15 +313,15 @@ nav .fa {
 
 /*About text style */
 h1 {
-  font-size: 40px;
+  font: 40px "Fira Sans", sans-serif;
   text-align: center;
   font-weight: 500;
 }
 
 /* small text under the About US text*/
-p {
+.About p {
   color: #777;
-  font-size: 15px;
+  font: 25px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
@@ -469,41 +330,82 @@ p {
 
 /* row style*/
 .row {
-  margin: 5%;
+  margin: 2%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-h2 {
-  font-size: 25px;
+/*about inside the boxes */
+.boxs h2 {
+  font: 30px "Fira Sans", sans-serif;
   text-align: center;
   font-weight: 500;
 }
 
+.boxs5 h2 {
+  font: 30px "Fira Sans", sans-serif;
+  text-align: center;
+  font-weight: 500;
+}
+.boxs img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+  width: 80px;
+}
+
+.boxs5 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+  width: 80px;
+}
+
 /* small text under the About US text*/
-p {
-  color: #777;
-  font-size: 15px;
+.boxs p {
+  color: rgb(0, 0, 0);
+  font: 20px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
   text-align: center;
 }
 
-/* CONTACT, PHONE, work and location style*/
-.boxs {
-  flex-basis: 30%;
-  background: #fff3f3;
-  border-radius: 25px;
-  margin-bottom: 2%;
-  padding: 10px 10px;
-  box-sizing: border-box;
-  transition: 0.5s;
+p {
+  color: #777;
+  font: 15px "Fira Sans", sans-serif;
+  font-weight: 250;
+  line-height: 25px;
+  padding: 15px;
+  text-align: center;
 }
 
+/* Services We Offer boxes*/
+.boxs {
+  background-color: white;
+  margin-bottom: 1%;
+  box-sizing: content-box;
+  transition: 1s;
+  flex-basis: 25%; /* */
+}
+
+.boxs5 {
+  margin-bottom: 1%;
+  box-sizing: content-box;
+  transition: 1s;
+  flex-basis: 25%; /* */
+}
+
+.boxs9 {
+  margin-bottom: 2%;
+  box-sizing: border-box;
+  transition: 1s;
+  flex-basis: 30%; /* */
+}
 .CONTACT-boxs {
   flex-basis: 30%;
-  background: #f8f2f2;
   border-radius: 25px;
   box-sizing: border-box;
   transition: 0.5s;
@@ -514,26 +416,34 @@ p {
   height: 5;
 }
 
-h5 {
-  font-size: 25px;
+.text-center1 {
+  font: 15px "Fira Sans", sans-serif;
+  font-weight: bold;
+  line-height: 25px;
+  padding: 15px;
   text-align: center;
-  font-weight: 500;
+  margin-bottom: 1%;
+}
+
+.CONTACT-boxs h5 {
+  font: 25px "Fira Sans", sans-serif;
+  text-align: center;
+  font-weight: bold;
 }
 
 /* small text under the About US text*/
-p {
-  color: #777;
-  font-size: 15px;
+.CONTACT-boxs p {
+  color: rgb(0, 0, 0);
+  font: 22px "Fira Sans", sans-serif;
   font-weight: 250;
   line-height: 25px;
   padding: 15px;
   text-align: center;
 }
 
-/* for pc and phone useers */
+/* for pc and phone useers 
 .LOCATION-box {
   flex-basis: 30%;
-  background: #a4dcff;
   border-radius: 1px;
   margin-bottom: 1%;
   box-sizing: border-box;
@@ -550,35 +460,138 @@ p {
   height: 100%;
   width: 100%;
   position: absolute;
-}
+} */
 
-/* Make effects when the mouse touch the box*/
+/* Make effects when the mouse touch the box About us boxs*/
 .boxs:hover {
-  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }
 
+.boxs5:hover {
+  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
+}
 .CONTACT-boxs:hover {
-  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
 }
 
+/* 
 .LOCATION-box:hover {
-  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 0 20px 0px rgba(184, 182, 182, 0.2);
+}*/
 
 /* how it appear on phone users*/
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+  .header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+      url("../../public/CC_4wq.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .change-width {
+    min-width: 221px;
+  }
+
+  .header-box {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .header-box:hover {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .boxs p {
+    color: rgb(0, 0, 0);
+    font: 22px "Fira Sans", sans-serif;
+    font-weight: 250;
+    line-height: 25px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .About {
+    widows: 80%;
+    margin: auto;
+    padding-top: 30px;
+  }
+
+  .boxs {
+    background-color: #f7f7f7;
+    margin-bottom: 10%;
+    transition: 1s;
+    justify-content: space-around;
+  }
+
+  .text-box h1 {
+    font-size: 40px;
+  }
+
+  nav .fa {
+    display: block;
+    color: red;
+    margin: 10px;
+    font-size: 25px;
+    cursor: pointer;
+  }
   .row {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 5%;
     flex-direction: column;
+  }
+
+  .footer {
+    width: 100%;
+    text-align: center;
+    padding: 1px 0;
+    background: rgb(40, 40, 40);
+  }
+
+  .footer h4 {
+    margin-bottom: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: azure;
+  }
+
+  .footer p {
+    color: azure;
+  }
+
+  /* icons size and style*/
+  .icons .fa {
+    color: red;
+    margin: 0 13px;
+    cursor: pointer;
   }
 }
 
 /* footer */
+
+.label {
+  width: 100%;
+  text-align: center;
+  padding: 1px 0;
+}
 /* title text size and style*/
 .footer {
   width: 100%;
   text-align: center;
   padding: 1px 0;
-  background: #1a1010;
+  background: rgb(40, 40, 40);
 }
 
 .footer h4 {
@@ -597,5 +610,11 @@ p {
   color: red;
   margin: 0 13px;
   cursor: pointer;
+}
+.change-width {
+  min-width: 221px;
+}
+.center{
+  text-align: center;
 }
 </style>
