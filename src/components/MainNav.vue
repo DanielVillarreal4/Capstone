@@ -1,75 +1,50 @@
 <template>
+  
   <div class="listGroup">
-    <v-list-item class="list" >
+    <v-list-item  class="list" >
       <v-list-item-icon>
         <v-icon>mdi-home</v-icon>
       </v-list-item-icon>
-      <router-link to="/" class="nav-link"> Home</router-link>
+      <a href="/" class="nav-link">Home</a>
     </v-list-item>
     <v-list-item class="list">
       <v-list-item-icon>
         <v-icon>mdi-help-box</v-icon>
       </v-list-item-icon>
-      <router-link to="/about" class="nav-link"> About</router-link>
+      <a href="/about" class="nav-link">About</a>
     </v-list-item>
     <v-list-item class="list">
       <v-list-item-icon>
         <v-icon>mdi-phone</v-icon>
       </v-list-item-icon>
-      <router-link to="/contact-us" class="nav-link"> Contact Us</router-link>
+      <a href="/contact-us" class="nav-link">Contact Us</a>
     </v-list-item>
   </div>
-  <!-- <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-      
-    </li>
-    <li class="nav-item">
-      <router-link to="/profile" class="nav-link">Profile</router-link>
-    </li>
-    <li class="nav-item">
-      <router-link to="/external-api" class="nav-link">
-        External API
-      </router-link>
-    </li>
-    <li class="nav-item">
-      <router-link to="/about" class="nav-link"> About</router-link>
-    </li>
-    <li class="nav-item">
-      <router-link to="/contact-us" class="nav-link">Contact Us</router-link>
-    </li>
-    <li class="nav-item">
-      <router-link to="/register" class="nav-link"> Register </router-link>
-    </li>
-    <li class="nav-item">
-      <router-link to="/login" class="nav-link"> Login </router-link>
-    </li>
-    <li class="nav-item">
-      <router-link to="/testingauth" class="nav-link">
-        TestingAuth
-      </router-link>
-    </li>
-    <li class="nav-item">
-      <router-link to="/testingapi" class="nav-link"> TestingAPI </router-link>
-    </li>
-  </ul> -->
 </template>
 
 <script>
-export default {
-  name: "MainNav",
-};
+  export default{
+ 
+  }
 </script>
 
 <style scoped>
-nav{
-  padding: 0% 0% !important;
+
+/* to hide the regular menu for mobile users  */
+@media(max-width: 700px){
+  .list {
+  display: none;
 }
+
+}
+
+/* end */
 ul, .listGroup {
+  position: relative;
   list-style-type: none !important; 
   margin: 0 !important;
   padding-top: 1em !important;
   overflow: hidden !important;
-  /* background-color: #333333; */
 }
 
 li, .list {
@@ -78,7 +53,7 @@ li, .list {
 }
 
 .nav-link {
-  display: block;
+  display: flex;
   color: white;
   text-align: center;
   padding: 16px;
@@ -89,3 +64,8 @@ li, .list {
   margin-right: -12px;
 }
 </style>
+
+
+
+
+
