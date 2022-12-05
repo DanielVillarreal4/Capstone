@@ -1,4 +1,4 @@
-Initial Downloads:
+# Initial Downloads:
 
 Download Git from here: https://git-scm.com/downloads 
 
@@ -9,7 +9,7 @@ Download Visual Studio Code from here: https://code.visualstudio.com/download
 If you already have these, then ignore this.
 
 
-To Download the repository:
+# To Download the repository:
 
 Navigate to the location on your machine in File Explorer that you want to put the repository.
 
@@ -25,7 +25,7 @@ To open the repository in Visual Studio Code:
 In the command line enter the following: code Capstone
 
 
-Prior to coding:
+# Prior to coding:
 
 Locate and click the extensions tab on the left side of Visual Studio Code
 
@@ -34,7 +34,7 @@ Search for Vetur and install the one created by Pine Wu
 This will allow you to see highlighting and IntelliSense for Vue.
 
 
-Prior to running the application:
+# Prior to running the application:
 
 Go to your application in the firebase console: https://console.firebase.google.com/
 
@@ -63,7 +63,7 @@ var firebaseConfig = {
   Then paste that code you copied into the placeholders in the firebaseInit.js and main.js files.
   
   
-To run the application:
+# To run the application:
 
 In the tabs at the top of Visual Studio Code, click on the Terminal tab and select the New Terminal option.
 
@@ -75,12 +75,12 @@ Once that is finished to run the application enter the following: npm run serve
 
 
 
-To build for production and get ready to deploy to Firebase:
+# To build for production and get ready to deploy to Firebase:
 
 In the Windows Powershell terminal enter the following: npm run build
 
 
-To deploy to Firebase:
+# To deploy to Firebase:
 
 Enter the following into the Windows Powershell terminal: cd dist
 
