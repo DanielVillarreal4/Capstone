@@ -3,25 +3,25 @@ import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
 import { firestorePlugin } from 'vuefire'
-import { domain, clientId, audience } from '../auth_config.json';
-import { Auth0Plugin } from '@/auth/auth0-plugin';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 Vue.use(firestorePlugin);
 
 Vue.config.productionTip = false
-// Authentication plugin
-Vue.use(Auth0Plugin, {
-  domain,
-  clientId,
-  audience,
-  onRedirectCallback: appState => {
-    router.push(
-      appState && appState.targetUrl
-        ? appState.targetUrl
-        : window.location.pathname
-    );
-  }
-});
+
+var firebaseConfig = {
+  apiKey: "AIzaSyCgBr1YaZsZ_PczYuq8x8CpTO_6yvangVs",
+  authDomain: "ccsystems-7f10e.firebaseapp.com",
+  projectId: "ccsystems-7f10e",
+  storageBucket: "ccsystems-7f10e.appspot.com",
+  messagingSenderId: "380029751782",
+  appId: "1:380029751782:web:57020be7fb5eb6f0418627",
+  measurementId: "G-BLPZGB9FGM"
+};
+
+firebase.initializeApp(firebaseConfig);
+
 new Vue({
   router,
   vuetify,

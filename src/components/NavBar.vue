@@ -8,6 +8,7 @@
       </div>
     </nav>
   </div>
+  
 </template>
 
 <script>
@@ -19,3 +20,4 @@
     components: { /*AuthNav,*/ MainNav },
   };
 </script>
+
